@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      { "model": "calamity:bars/aerialite" },
+      { "model": "calamity:bars/aerialite", "y": 90 },
+      { "model": "calamity:bars/aerialite", "y": 180 },
+      { "model": "calamity:bars/aerialite", "y": 270 }
+    ]
+  }
+}

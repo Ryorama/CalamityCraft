@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      { "model": "calamity:blocks/sulphurous_sandstone" },
+      { "model": "calamity:blocks/sulphurous_sandstone", "y": 90 },
+      { "model": "calamity:blocks/sulphurous_sandstone", "y": 180 },
+      { "model": "calamity:blocks/sulphurous_sandstone", "y": 270 }
+    ]
+  }
+}

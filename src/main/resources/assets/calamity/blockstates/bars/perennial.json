@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      { "model": "calamity:bars/perennial" },
+      { "model": "calamity:bars/perennial", "y": 90 },
+      { "model": "calamity:bars/perennial", "y": 180 },
+      { "model": "calamity:bars/perennial", "y": 270 }
+    ]
+  }
+}

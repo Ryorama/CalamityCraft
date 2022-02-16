@@ -1,0 +1,32 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "calamity:items/swords/aerialite_sword"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 0, -90, 55 ],
+			"translation": [ 0, 12.0, -1.5 ],
+			"scale": [ 1.65, 1.65, 1 ]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 90, -55 ],
+			"translation": [ 0, 12.0, -1.5 ],
+			"scale": [ 1.65, 1.65, 1 ]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, -90, 25 ],
+			"translation": [ 1.13, 8.2, 1.13 ],
+			"scale": [ 1.4, 1.4, 1 ]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, 90, -25 ],
+			"translation": [ 1.13, 8.2, 1.13 ],
+			"scale": [ 1.4, 1.4, 1 ]
+		},
+		"gui": {
+			"scale": [ 1.125, 1.125, 1 ],
+			"translation": [ 1.25, 2.5, 0 ]
+		}
+	}
+}

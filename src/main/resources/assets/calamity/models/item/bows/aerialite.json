@@ -1,0 +1,6 @@
+{
+  "parent": "terraria:prebuilt/bow",
+  "textures": {
+    "layer0": "calamity:items/bows/aerialite"
+  }
+}

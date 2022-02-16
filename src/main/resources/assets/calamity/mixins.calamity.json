@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.7.10",
+  "package": "ryorama.calamity.mixins",
+  "refmap": "mixins.calamity.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MixinChunkGeneratorTerraria"
+  ],
+  "server": [
+
+  ]
+}

@@ -1,0 +1,16 @@
+[
+	{
+        "modid": "calamity",
+        "name": "CalamityCraft",
+        "version": "1.2",
+        "description": "CalamityCraft is a mod that adds content from the tModLoader mod Calamity into Minecraft!",
+        "mcversion": "1.12.2",
+        "url": "https://discord.gg/ynQ2cMf",
+        "updateUrl": "",
+        "authorList": ["Ryorama, UndernityGaming, Kelvin"],
+        "credits": "Thanks to Zeith for making TerrariaCraft and to the creator of the Clamaity mod!",
+        "logoFile": "assets/calamity/icon.png",
+        "screenshots": [],
+        "dependencies": [ "required-after:terraria"]
+    }
+]

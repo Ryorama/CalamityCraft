@@ -1,0 +1,7 @@
+{
+    "parent": "terraria:block/bars/base",
+	"textures": {
+        "0": "calamity:blocks/bars/aerialite",
+		"particle": "calamity:items/bars/aerialite"
+	}
+}

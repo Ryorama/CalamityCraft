@@ -1,0 +1,20 @@
+{
+  "id": "calamity",
+  "name": "CalamityCraft",
+  "authors": [ "Ryorama" ],
+  "description": "CalamityCraft is a mod that adds content from the tModLoader mod Calamity into Minecraft!",
+  "icon_path": "assets/calamity/icon.png",
+  "social": {
+    "discord": "https://discord.gg/ynQ2cMf"
+  },
+  "issues_page": "https://github.com/Ryorama/CalamityCraft/issues",
+  "website": "https://www.curseforge.com/minecraft/mc-mods/calamitycraft",
+  "compatibility": {
+    "public_versions": [
+      "[12.5.27,12.5.28,12.5.29)"
+    ],
+    "idev_versions": [
+      "[idev-,)"
+    ]
+  }
+}

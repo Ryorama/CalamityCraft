@@ -1,0 +1,35 @@
+item.calamity:materials/wulfrum_shard.name=Wulfrum Metal Scrap
+item.calamity:materials/blood_orb.name=Blood Orb
+item.calamity:swords/wulfrum.name=Wulfrum Blade
+item.calamity:pickaxes/wulfrum.name=Wulfrum Pickaxe
+item.calamity:bows/wulfrum.name=Wulfrum Bow
+tile.calamity:bars/aerialite.name=Aerialite Bar
+tile.calamity:bars/perennial.name=Perennial Bar
+item.calamity:swords/aerialite.name=Wind Blade
+item.calamity:bows/aerialite.name=Galeforce
+item.calamity:pickaxes/aerialite.name=Skifringe Pickaxe
+item.calamity:bloodfire_arrow.name=Bloodfire Arrow
+item.calamity:artic_arrow.name=Artic Arrow
+item.calamity:blood_orange.name=Blood Orange
+item.calamity:miracle_fruit.name=Miracle Fruit
+item.calamity:dragon_fruit.name=Dragonfruit
+item.calamity:elder_berry.name=Elderberry
+item.calamity:treasure_bags/starter_bag.name=Starter Bag
+item.calamity:hostiles/slimes/wulfrum.name=Wulfrum Slime
+item.calamity:hostiles/wulfrum_drone.name=Wulfrum Drone
+
+tile.calamity:ore/aerialite_ore.name=Aerialite Ore
+tile.calamity:ore/perennial_ore.name=Perennial Ore
+
+tile.calamity:sulphurous_sand.name=Sulphurous Sand
+tile.calamity:sulphurous_sandstone.name=Sulphurous Sandstone
+
+entity.calamity:wulfrum_slime.name=Wulfrum Slime
+entity.calamity:wulfrum_drone.name=Wulfrum Drone
+
+itemTab.calamity:items=CalamityCraft Items
+itemGroup.calamity:materials=Materials
+itemGroup.calamity:picks=Pickaxes
+itemGroup.calamity:swords=Swords
+itemGroup.calamity:bows=Bows
+itemGroup.calamity:ammo=Ammo
