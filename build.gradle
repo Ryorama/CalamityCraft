@@ -49,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    deobfCompile "org.zeith.terraria:TerrariaCraft-1.12.2:12.5.27"
+    deobfCompile "org.zeith.terraria:TerrariaCraft-1.12.2:12.5.32"
 }
 
 processResources {
