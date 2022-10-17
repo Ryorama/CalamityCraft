@@ -13,6 +13,7 @@ import org.zeith.terraria.init.biomes.BiomeTypesTC;
 import org.zeith.terraria.utils.math.Vector4;
 import ryorama.calamity.Calamity;
 import ryorama.calamity.blocks.BlocksC;
+import ryorama.calamity.init.BiomeTypesC;
 
 public class SulphurousSeaBiome extends TerrariaBiome {
 
@@ -29,7 +30,7 @@ public class SulphurousSeaBiome extends TerrariaBiome {
         this.weather.isSandy = true;
         this.blocks.add(BlocksC.SULPHUROUS_SAND);
         this.blocks.add(BlocksC.SULPHUROUS_SANDSTONE);
-        this.ampBiomeType = BiomeTypesTC.DESERT;
+        this.ampBiomeType = BiomeTypesC.SULPHUROUS_SEA_BIOME_TYPE;
         this.sky = new BiomeSky();
         this.sky.skyColor = new DotNetColors.DNColor(62217145);
         this.sky.fogColor = new DotNetColors.DNColor(62217145);

@@ -20,6 +20,8 @@ public class CreativeTabsC {
    public static final TabInfo TI_ITEMS_BOWS = TI_ITEMS_CC.sub("bows");
    public static final TabInfo TI_ITEMS_AMMO = TI_ITEMS_CC.sub("ammo");
 
+   public static final TabInfo TI_ITEMS_SUMMON = TI_ITEMS_CC.sub("summon");
+
    public static final CreativeTabs TAB_ITEMS_CC;
 
    private static CreativeTabs createTab(String type, final IStackProvider.IAccessorStackProvider icon) {
