@@ -1,0 +1,23 @@
+{
+	"id": "examplemod",
+	"name": "Example Mod",
+	"description": "Sample description that will be shown to users.",
+	"authors": [
+		"Cool Dude"
+	],
+	"website": "https://terrariacraft.com",
+	"issues_page": "https://github.com/TerrariaCraft/Issues/issues/",
+	"icon_path": "assets/examplemod/textures/icon.png",
+	"social": {
+		"discord": "https://discord.terrariacraft.com",
+		"twitter": "https://twitter.com/TerrariaCraftMC"
+	},
+	"compatibility": {
+		"public_versions": [
+			"[12.5.29,12.6.)"
+		],
+		"idev_versions": [
+			"[idev-,)"
+		]
+	}
+}

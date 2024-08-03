@@ -1,0 +1,13 @@
+itemTab.examplemod:items=Example Mod (Items)
+itemTab.examplemod:blocks=Example Mod (Blocks)
+
+item.examplemod:swords/example.name=Example Sword
+item.examplemod:example_material.name=Example Material
+
+tile.examplemod:example_block.name=Example Block
+tile.examplemod:bars/example.name=Example Bar
+tile.examplemod:bricks/example.name=Example Brick
+tile.examplemod:torches/example.name=Example Torch
+
+tooltip.examplemod:example_material=Condensed gel or something, idk.
+

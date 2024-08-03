@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"normal": [
+			{ "model": "examplemod:bars/example" },
+			{ "model": "examplemod:bars/example", "y": 90 },
+			{ "model": "examplemod:bars/example", "y": 180 },
+			{ "model": "examplemod:bars/example", "y": 270 }
+		]
+	}
+}
