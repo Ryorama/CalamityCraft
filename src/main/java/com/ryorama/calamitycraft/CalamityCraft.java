@@ -1,0 +1,78 @@
+package com.ryorama.calamitycraft;
+
+import com.google.common.base.Predicate;
+import com.ryorama.calamitycraft.proxy.CommonProxy;
+import com.zeitheron.hammercore.HammerCore;
+import com.zeitheron.hammercore.world.WorldGenHelper;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.*;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.*;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.apache.logging.log4j.*;
+import org.zeith.terraria.api.events.world.crafting.RegisterCraftingEvent;
+import org.zeith.terraria.api.mod.ITerrariaMod;
+
+import java.util.Random;
+
+@Mod(
+		modid = CalamityCraft.MODID,
+		name = CalamityCraft.NAME,
+		version = "@VERSION@", // This gets automatically replaced with actual version from build.txt when compiling the mod into jarfile.
+		dependencies = "required-after:terraria"
+)
+public class CalamityCraft
+		implements ITerrariaMod
+{
+	public static final Logger LOG = LogManager.getLogger("CalamityCraft");
+	
+	public static final String MODID = "calamitycraft";
+	public static final String NAME = "CalamityCraft";
+	
+	@SidedProxy( // TODO: Update package names whenever you refactor!
+			clientSide = "com.ryorama.calamitycraft.proxy.ClientProxy",
+			serverSide = "com.ryorama.calamitycraft.proxy.CommonProxy",
+			modId = MODID
+	)
+	public static CommonProxy PROXY;
+	
+	public CalamityCraft()
+	{
+		// Used to add custom recipes
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+	
+	@EventHandler
+	public void construction(FMLConstructionEvent event)
+	{
+		// This is very recommended for common addon setup.
+		ITerrariaMod.super.constructionEvent(event);
+		
+		// Pass construction to proxies.
+		PROXY.construct();
+		
+		LOG.info("Constructed.");
+	}
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		// This performs registration of things in time!
+		HammerCore.registerKernelsForMod(MODID);
+	}
+	
+	@SubscribeEvent
+	public void addRecipes(RegisterCraftingEvent e)
+	{
+
+	}
+	
+	// This is left like so intentionally.
+	// When compiled, will get replaced by "12.5.1".contains("@VERSION") thus returning FALSE
+	@SuppressWarnings("ConstantValue")
+	public static final boolean IN_DEV = "@VERSION@".contains("@VERSION");
+}

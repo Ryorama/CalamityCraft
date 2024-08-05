@@ -1,9 +1,9 @@
 #Mod info
-mod_id=example
-mod_id_fancy=ExampleAddon
-mod_name=ExampleAddon
+mod_id=calamitycraft
+mod_id_fancy=CalamityCraft
+mod_name=CalamityCraft
 mod_version=12.5.1
-author=Zeitheron
+author=Ryorama
 
 #Runtime info
 forge_version=14.23.5.2860
@@ -22,3 +22,5 @@ required_mods=hammer-lib;
 optional_mods=
 incompatible_mods=
 embedded_mods=
+
+# MC Stuff

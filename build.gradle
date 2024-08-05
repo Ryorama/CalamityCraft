@@ -47,7 +47,8 @@ minecraft {
                     '-Dmixin.checks.interfaces=true',
                     '-Dmixin.debug.export=true',
                     "-XX:+UseConcMarkSweepGC",
-                    "-XX:-UseAdaptiveSizePolicy"
+                    "-XX:-UseAdaptiveSizePolicy",
+                    new String("-Djava.library.path=${natives_dir}")
             ])
 
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -55,7 +56,9 @@ minecraft {
             property 'log4j.configurationFile', 'log4j2.xml'
             args([
                     "-username",
-                    System.env.MC_USERNAME
+                    mc_username,
+                    "-uuid",
+                    mc_uuid
             ])
         }
 
@@ -89,6 +92,7 @@ repositories {
         url = "https://jitpack.io"
     }
     flatDir { dirs "libraries/${config.minecraft_version}/all" }
+    flatDir { dirs "libraries/${config.minecraft_version}/mods" }
     flatDir { dirs "libraries/${config.minecraft_version}/classpathOnly" }
     flatDir { dirs "libraries/${config.minecraft_version}/runtimeOnly" }
 }
@@ -111,9 +115,9 @@ dependencies {
     }
 
     ////// UTILITY STUFF //////
-    compileOnly 'org.projectlombok:lombok:1.18.30'
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.jetbrains:annotations:24.0.1'
+    compileOnly "org.projectlombok:lombok:${lombok}"
+    annotationProcessor "org.projectlombok:lombok:${lombok}"
+    compileOnly "org.jetbrains:annotations:${jb_annotations}"
     ///////////////////////////
 
     def libraries = new File(file("libraries"), "${config.minecraft_version}")
@@ -127,6 +131,18 @@ dependencies {
             def modversion = file.name.substring(splitPos + 1, file.name.length() - 4)
             dependencies {
                 implementation project.dependencies.create("_all:$modartifact:$modversion")
+            }
+        }
+    } else libDir.mkdir();
+
+    libDir = new File(libraries, "mods");
+    if (libDir.isDirectory()) {
+        libDir.eachFile { file ->
+            def splitPos = file.name.lastIndexOf("-")
+            def modartifact = file.name.substring(0, splitPos)
+            def modversion = file.name.substring(splitPos + 1, file.name.length() - 4)
+            dependencies {
+                tcModsFolder fg.deobf(project.dependencies.create("_all:$modartifact:$modversion"))
             }
         }
     } else libDir.mkdir();

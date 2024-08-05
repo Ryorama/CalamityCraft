@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder addon for Terraria Craft.",
+  "modid": "calamitycraft",
+  "name": "CalamityCraft",
+  "description": "An add-on for the TerrariaCraft mod which aims to add content from the tModLoader mod Calamity into Minecraft.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/calamitycraft",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Ryorama"],
+  "credits": "Zeith for making TerrariaCraft, Re-Logic for making Terraria, and the Calamity mod team",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
