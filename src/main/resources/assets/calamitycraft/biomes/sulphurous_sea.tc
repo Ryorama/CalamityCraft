@@ -1,0 +1,15 @@
+{
+	"terraria:biome_weather": {
+		"water": {
+			"base": "20A875",
+			"underground": "A8893A",
+			"cavern": "413B65"
+		},
+		"sky": "FFE059",
+		"fog": "FFE97F",
+		"effects": [
+			"terraria:slime_rain",
+			"terraria:sandstorm"
+		]
+	}
+}
