@@ -1,6 +1,8 @@
 itemTab.calamitycraft:items=CalamityCraft (Items)
 itemTab.calamitycraft:blocks=CalamityCraft (Blocks)
 
+tbiome.calamitycraft:sulphurous_sea=Sulphurous Sea
+
 item.calamitycraft:materials/wulfrum_metal_scrap.name=Wulfrum Metal Scrap
 item.calamitycraft:materials/energy_core.name=Energy Core
 item.calamitycraft:materials/ancient_bone_dust.name=Ancient Bone Dust

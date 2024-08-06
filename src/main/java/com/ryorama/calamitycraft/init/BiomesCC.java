@@ -5,7 +5,8 @@ import com.zeitheron.hammercore.annotations.RegistryName;
 import com.zeitheron.hammercore.annotations.SimplyRegister;
 
 @SimplyRegister
-public class BiomesCC {
-    @RegistryName("sulphurous_sea")
-    BiomeSulphurousSea SULPHUROUS_SEA = new BiomeSulphurousSea();
+public interface BiomesCC
+{
+	@RegistryName("sulphurous_sea")
+	BiomeSulphurousSea SULPHUROUS_SEA = new BiomeSulphurousSea();
 }

@@ -7,10 +7,11 @@ import org.zeith.terraria.api.items.ItemRarity;
 import org.zeith.terraria.common.content.blocks.base.BlockBaseTC;
 
 @SimplyRegister(prefix = "ores/")
-public class OresCC {
-
-    @RegistryName("aerialite_ore")
-    public static final BlockBaseTC AERIALITE_ORE = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.ORANGE);
-    @RegistryName("aerialite_ore_disenchanted")
-    public static final BlockBaseTC AERIALITE_ORE_DISENCHANTED = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.ORANGE);
+public interface OresCC
+{
+	@RegistryName("aerialite_ore")
+	BlockBaseTC AERIALITE_ORE = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.ORANGE);
+	
+	@RegistryName("aerialite_ore_disenchanted")
+	BlockBaseTC AERIALITE_ORE_DISENCHANTED = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.ORANGE);
 }
