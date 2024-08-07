@@ -41,10 +41,7 @@ public class PlayerCalamityData
 			sulphuricPoisoning += 0.05F;
 			
 			// Sync to client once a second.
-			// FIXME: replace data.markDirty() with this.markDirty() after next TC build!
-			//  Explanation: TC will have a modular sync approach, reducing the amount of data sent.
-			//  Using markDirty on the data instance will only sync this specific instance, instead of full player state.
-			if(data.ticksExisted % 20 == 0 || wasClean) data.markDirty();
+			if(data.ticksExisted % 20 == 0 || wasClean) markDirty();
 		}
 		
 		if(data.ticksExisted % 4 == 0 && !data.inWater())
@@ -59,7 +56,7 @@ public class PlayerCalamityData
 				health.damage(150, DamageSourcesTC.GENERIC, true, false);
 			}
 			sulphuricPoisoning = 0;
-			data.markDirty(); // FIXME same as above!
+			markDirty();
 		}
 	}
 }
