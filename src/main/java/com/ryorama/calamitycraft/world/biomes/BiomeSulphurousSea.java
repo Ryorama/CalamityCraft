@@ -24,8 +24,9 @@ public class BiomeSulphurousSea
 		this.music.replaceNightMusic = false;
 		this.music.replaceRainMusic = true;
 		this.music.tolerateTownMusic = false;
-		this.music.setSurfaceMusic(MusicMood.of(0.75F, InfoCC.id("music/sulphurous_sea_day")));
-		this.music.setNightMusic(MusicMood.of(0.75F, InfoCC.id("music/sulphurous_sea_night")));
+		this.music.tolerateWindyDayMusic = false;
+		this.music.setSurfaceMusic(MusicMood.of(2, InfoCC.id("music/sulphurous_sea_day")));
+		this.music.setNightMusic(MusicMood.of(2, InfoCC.id("music/sulphurous_sea_night")));
 		this.blocks.add(BlocksCC.SULPHUROUS_SAND);
 		this.blocks.add(BlocksCC.SULPHUROUS_SANDSTONE);
 		this.blocks.add(BlocksCC.HARDENED_SULPHUROUS_SANDSTONE);

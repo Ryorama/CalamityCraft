@@ -6,7 +6,7 @@ import com.zeitheron.hammercore.annotations.SimplyRegister;
 import org.zeith.terraria.api.data.player.PlayerDataProvider;
 
 @SimplyRegister
-public interface DataProvidersTC
+public interface DataProvidersCC
 {
 	@RegistryName("calamity")
 	PlayerDataProvider<PlayerCalamityData> PLAYER_CALAMITY = PlayerDataProvider.of(PlayerCalamityData::new);

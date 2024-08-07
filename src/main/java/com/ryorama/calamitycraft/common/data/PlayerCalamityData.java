@@ -1,7 +1,7 @@
 package com.ryorama.calamitycraft.common.data;
 
 import com.ryorama.calamitycraft.init.BiomesCC;
-import com.ryorama.calamitycraft.init.DataProvidersTC;
+import com.ryorama.calamitycraft.init.DataProvidersCC;
 import com.zeitheron.hammercore.api.io.NBTSerializable;
 import lombok.val;
 import net.minecraft.util.ITickable;
@@ -19,7 +19,7 @@ public class PlayerCalamityData
 	
 	public static PlayerCalamityData get(PlayerDataTC data)
 	{
-		return data.getData(DataProvidersTC.PLAYER_CALAMITY);
+		return data.getData(DataProvidersCC.PLAYER_CALAMITY);
 	}
 	
 	public PlayerCalamityData(PlayerDataProvider<PlayerCalamityData> holder, PlayerDataTC data)
@@ -38,7 +38,7 @@ public class PlayerCalamityData
 			boolean wasClean = sulphuricPoisoning < 0.01F;
 			
 			// Previously 0.2, but divided by 20 ticks, so we create fewer branches.
-			sulphuricPoisoning += 0.01F;
+			sulphuricPoisoning += 0.05F;
 			
 			// Sync to client once a second.
 			// FIXME: replace data.markDirty() with this.markDirty() after next TC build!
@@ -53,7 +53,11 @@ public class PlayerCalamityData
 		if(sulphuricPoisoning >= 12)
 		{
 			val health = data.health();
-			health.damage(health.maxHP * 0.25F, DamageSourcesTC.GENERIC, true, false);
+			if (health.maxHP * 0.25 < 150) {
+				health.damage(health.maxHP * 0.25F, DamageSourcesTC.GENERIC, true, false);
+			} else {
+				health.damage(150, DamageSourcesTC.GENERIC, true, false);
+			}
 			sulphuricPoisoning = 0;
 			data.markDirty(); // FIXME same as above!
 		}
