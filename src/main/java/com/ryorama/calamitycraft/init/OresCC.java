@@ -14,4 +14,7 @@ public interface OresCC
 	
 	@RegistryName("aerialite_ore_disenchanted")
 	BlockBaseTC AERIALITE_ORE_DISENCHANTED = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.ORANGE);
+
+	@RegistryName("scoria_ore")
+	BlockBaseTC SCORIA_ORE = new BlockBaseTC().inTab(ItemTabEvents.TI_ORES).withRarity(ItemRarity.YELLOW);
 }

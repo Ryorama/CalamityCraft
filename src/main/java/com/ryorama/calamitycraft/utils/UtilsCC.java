@@ -10,13 +10,6 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class UtilsCC {
-    public static boolean isNegative(int var) {
-        if (var >= 0) {
-            return false;
-        }
-        return true;
-    }
-
     public static boolean generateOre(World worldIn, Random rand, BlockPos position, int numberOfBlocks, IBlockState oreBlock, Predicate<IBlockState> predicate) {
         float f = rand.nextFloat() * 3.1415927F;
         double d0 = (double) ((float) (position.getX() + 8) + MathHelper.sin(f) * numberOfBlocks / 8.0F);

@@ -53,10 +53,22 @@ item.calamitycraft:loot_bags/starter_bag.name=Starter Bag
 
 tile.calamitycraft:ores/aerialite_ore.name=Aerialite Ore
 tile.calamitycraft:ores/aerialite_ore_disenchanted.name=Disenchanted Aerialite Ore
+tile.calamitycraft:ores/scoria_ore.name=Scoria Ore
+
 tile.calamitycraft:sulphurous_sand.name=Sulphurous Sand
 tile.calamitycraft:sulphurous_sandstone.name=Sulphurous Sandstone
 tile.calamitycraft:hardened_sulphurous_sandstone.name=Hardened Sulphurous Sandstone
+tile.calamitycraft:abyss_gravel.name=Abyss Gravel
+tile.calamitycraft:planty_mush.name=Planty Mush
+tile.calamitycraft:pyre_mantle.name=Pyre Mantle
+tile.calamitycraft:pyre_mantle_molten.name=Pyre Mantle Molten
+tile.calamitycraft:sulphurous_shale.name=Sulphurous Shale
+tile.calamitycraft:voidstone.name=Voidstone
 
 itemGroup.calamitycraft:materials=Materials
 itemGroup.calamitycraft:loot_bags=Loot Bags
 itemGroup.calamitycraft:ores=Ores
+
+buff.calamitycraft:irradiated.name=Irradiated
+
+tooltip.calamitycraft:irradiated_tooltip=Your skin is burning off

@@ -1,9 +1,7 @@
 package com.ryorama.calamitycraft.common.events;
 
-import com.ryorama.calamitycraft.CalamityCraft;
 import com.ryorama.calamitycraft.init.OresCC;
 import com.ryorama.calamitycraft.utils.UtilsCC;
-import com.zeitheron.hammercore.world.gen.WorldGenMinableHC;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
