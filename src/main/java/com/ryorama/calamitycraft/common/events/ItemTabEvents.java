@@ -8,14 +8,13 @@ import org.zeith.terraria.api.items.tabs.TabInfo;
 
 @Mod.EventBusSubscriber
 public class ItemTabEvents {
-    public static final TabInfo TI_ITEMS;
-    public static final TabInfo TI_BLOCKS;
-    public static final TabInfo TI_MATERIALS;
-    public static final TabInfo TI_LOOTBAGS;
-    public static final TabInfo TI_POTIONS;
-    public static final TabInfo TI_ORES;
-
-
+    public static final TabInfo TI_ITEMS = new TabInfo(ItemTabsCC.ITEMS_ROOT);
+    public static final TabInfo TI_BLOCKS = new TabInfo(ItemTabsCC.BLOCKS_ROOT);
+    public static final TabInfo TI_MATERIALS = TI_ITEMS.sub("materials");
+    public static final TabInfo TI_LOOTBAGS = TI_ITEMS.sub("loot_bags");
+    public static final TabInfo TI_POTIONS = TI_ITEMS.sub("potions");
+    public static final TabInfo TI_ORES = TI_BLOCKS.sub("ores");
+    
     @SubscribeEvent
     public static void populateTab(PopulateTabEvent e) {
         if (e.tab == ItemTabsCC.ITEMS_ROOT) {
@@ -29,14 +28,4 @@ public class ItemTabEvents {
             e.setIcon(TI_POTIONS, PotionsCC.SULPHURSKIN_POTION);
         }
     }
-
-    static {
-        TI_ITEMS = new TabInfo(ItemTabsCC.ITEMS_ROOT);
-        TI_BLOCKS = new TabInfo(ItemTabsCC.BLOCKS_ROOT);
-        TI_MATERIALS = TI_ITEMS.sub("materials");
-        TI_LOOTBAGS = TI_ITEMS.sub("loot_bags");
-        TI_POTIONS = TI_ITEMS.sub("potions");
-        TI_ORES = TI_BLOCKS.sub("ores");
-    }
 }
-

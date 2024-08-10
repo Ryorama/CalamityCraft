@@ -1,4 +1,4 @@
-package com.ryorama.calamitycraft.common.buffs;
+package com.ryorama.calamitycraft.common.content.buffs;
 
 import com.ryorama.calamitycraft.utils.TranslatorCC;
 import com.zeitheron.hammercore.utils.forge.RegisterHook;
@@ -12,7 +12,6 @@ import org.zeith.terraria.api.DamageSourcesTC;
 import org.zeith.terraria.api.buffs.DebuffBase;
 import org.zeith.terraria.api.entity.IBuffData;
 import org.zeith.terraria.api.events.calc.GetDefenseEvent;
-import org.zeith.terraria.api.tooltip.ITooltipElement;
 import org.zeith.terraria.api.tooltip.StringTooltipElement;
 import org.zeith.terraria.api.tooltip.TooltipBody;
 import org.zeith.terraria.common.data.player.PlayerDataTC;
@@ -27,11 +26,11 @@ public class IrradiatedDebuff extends DebuffBase {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(EntityPlayer player, int amplifier, int ticksLeft, TooltipBody info) {
-        info.append(new ITooltipElement[]{new StringTooltipElement(TranslatorCC.tooltip("irradiated_tooltip", new Object[]{10}))});
+        info.append(new StringTooltipElement(TranslatorCC.tooltip("irradiated_tooltip", 10)));
     }
 
     @RegisterHook
-    protected final void armorReg() {
+    protected final void subscribe() {
         TerrariaCraft.EVENT_BUS.register(this);
     }
 
