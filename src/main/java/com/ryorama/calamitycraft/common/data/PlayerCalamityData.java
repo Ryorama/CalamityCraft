@@ -1,6 +1,7 @@
 package com.ryorama.calamitycraft.common.data;
 
 import com.ryorama.calamitycraft.init.BiomesCC;
+import com.ryorama.calamitycraft.init.BuffsCC;
 import com.ryorama.calamitycraft.init.DataProvidersCC;
 import com.zeitheron.hammercore.api.io.NBTSerializable;
 import lombok.val;
@@ -37,9 +38,11 @@ public class PlayerCalamityData
 		{
 			boolean wasClean = sulphuricPoisoning < 0.01F;
 			
-			// Previously 0.2, but divided by 20 ticks, so we create fewer branches.
-			sulphuricPoisoning += 0.05F;
-			
+			if (data.activeBuffs().isBuffActive(BuffsCC.SULPHURSKIN)) {
+				sulphuricPoisoning += 0.02F;
+			} else {
+				sulphuricPoisoning += 0.05F;
+			}
 			// Sync to client once a second.
 			if(data.ticksExisted % 20 == 0 || wasClean) markDirty();
 		}
