@@ -44,11 +44,15 @@ public class PlayerCalamityData
 				sulphuricPoisoning += 0.05F;
 			}
 			// Sync to client once a second.
-			if(data.ticksExisted % 20 == 0 || wasClean) markDirty();
+			if(data.ticksExisted % 5 == 0 || wasClean) markDirty();
 		}
 		
 		if(data.ticksExisted % 4 == 0 && !data.inWater())
+		{
+			boolean wasDirty = sulphuricPoisoning > 0F;
 			sulphuricPoisoning = Math.max(sulphuricPoisoning - 0.2F, 0F);
+			if(data.ticksExisted % 8 == 0 || (sulphuricPoisoning <= 0F && wasDirty)) markDirty();
+		}
 		
 		if(sulphuricPoisoning >= 12)
 		{
