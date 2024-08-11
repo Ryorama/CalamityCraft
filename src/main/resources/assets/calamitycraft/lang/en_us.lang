@@ -1,7 +1,18 @@
+## Item Tabs ##
+
+itemGroup.calamitycraft:materials=Materials
+itemGroup.calamitycraft:loot_bags=Loot Bags
+itemGroup.calamitycraft:potions=Potions
+itemGroup.calamitycraft:ores=Ores
+
 itemTab.calamitycraft:items=CalamityCraft (Items)
 itemTab.calamitycraft:blocks=CalamityCraft (Blocks)
 
+## Biomes ##
+
 tbiome.calamitycraft:sulphurous_sea=Sulphurous Sea
+
+## Items
 
 item.calamitycraft:materials/wulfrum_metal_scrap.name=Wulfrum Metal Scrap
 item.calamitycraft:materials/energy_core.name=Energy Core
@@ -49,12 +60,14 @@ item.calamitycraft:materials/twisting_nether.name=Twisting Nether
 item.calamitycraft:materials/unholy_core.name=Unholy Core
 item.calamitycraft:materials/yharon_soul_fragment.name=Yharon Soul Fragment
 
-item.calamitycraft:potions/sulphurskin_potion.name=Sulphurskin Potion
-item.calamitycraft:potions/omega_healing_potion.name=Omega Healing Potion
-item.calamitycraft:potions/supreme_healing_potion.name=Supreme Healing Potion
-item.calamitycraft:potions/supreme_mana_potion.name=Supreme Mana Potion
+item.calamitycraft:potions/sulphurskin.name=Sulphurskin Potion
+item.calamitycraft:potions/omega_healing.name=Omega Healing Potion
+item.calamitycraft:potions/supreme_healing.name=Supreme Healing Potion
+item.calamitycraft:potions/supreme_mana.name=Supreme Mana Potion
 
 item.calamitycraft:loot_bags/starter_bag.name=Starter Bag
+
+## Blocks ##
 
 tile.calamitycraft:ores/aerialite_ore.name=Aerialite Ore
 tile.calamitycraft:ores/aerialite_ore_disenchanted.name=Disenchanted Aerialite Ore
@@ -70,15 +83,13 @@ tile.calamitycraft:pyre_mantle_molten.name=Pyre Mantle Molten
 tile.calamitycraft:sulphurous_shale.name=Sulphurous Shale
 tile.calamitycraft:voidstone.name=Voidstone
 
-itemGroup.calamitycraft:materials=Materials
-itemGroup.calamitycraft:loot_bags=Loot Bags
-itemGroup.calamitycraft:potions=Potions
-itemGroup.calamitycraft:ores=Ores
+## Buffs ##
 
 buff.calamitycraft:irradiated.name=Irradiated
-buff.calamitycraft:sulphurskin_potion.name=Sulphurskin
+buff.calamitycraft:irradiated.desc=Your skin is burning off
 
-buff.calamitycraft:sulphurskin_potion.desc=Reduces the effects of the sulphuric waters
+buff.calamitycraft:sulphurskin.name=Sulphurskin
+buff.calamitycraft:sulphurskin.desc=The sulphuric waters have a lesser effect on you
 
-tooltip.calamitycraft:irradiated_tooltip=Your skin is burning off
-tooltip.calamitycraft:sulphurskin_tooltip=The sulphuric waters have a lesser effect on you
+## Tooltips ##
+tooltip.calamitycraft:potions/sulphurskin=Reduces the effects of the sulphuric waters

@@ -4,5 +4,6 @@ import com.zeitheron.hammercore.annotations.*;
 
 @SimplyRegister
 public interface ItemsCC
+	extends PotionsCC
 {
 }
