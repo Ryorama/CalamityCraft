@@ -42,7 +42,7 @@ public class RenderSulphuricWaterPoisonMeter
 	@Override
 	public int height()
 	{
-		return sulphuricPoisoning > 0 ? 14 : 0;
+		return sulphuricPoisoning > 0 ? 13 : 0;
 	}
 	
 	@Override
@@ -51,7 +51,7 @@ public class RenderSulphuricWaterPoisonMeter
 		if(sulphuricPoisoning <= 0) return;
 		val gfx = renderer.getGraphics();
 		gfx.color(1F, 1F, 1F, 1F);
-		gfx.blit(WATER_BAR, 0, 0, 0, 0, 26, 9);
-		gfx.blit(WATER_BAR, 5, 0, 0, 9, 16 * sulphuricPoisoning, 9);
+		gfx.blit(WATER_BAR, 0, 2, 0, 0, 26, 9);
+		gfx.blit(WATER_BAR, 5, 2, 0, 9, 16 * sulphuricPoisoning, 9);
 	}
 }
