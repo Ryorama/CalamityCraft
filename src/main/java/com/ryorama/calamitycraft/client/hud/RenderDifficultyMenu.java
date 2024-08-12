@@ -44,7 +44,7 @@ public class RenderDifficultyMenu implements IHudElement {
     @Override
     public void update(PlayerDataTC player)
     {
-        wd = WorldCalamityData.get(WorldDataTC.get(player.getWorld()));
+        wd = WorldCalamityData.get(player.world);
         pd = player;
     }
 
