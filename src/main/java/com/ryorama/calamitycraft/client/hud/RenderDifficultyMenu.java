@@ -27,6 +27,8 @@ import org.zeith.terraria.common.container.ContainerNewInventory;
 import org.zeith.terraria.common.data.player.PlayerDataTC;
 import org.zeith.terraria.common.data.world.world.WorldDataTC;
 
+// Use a widget instead. It has access to input as well as rendering capabilities.
+@Deprecated
 @Hud(value = HudAnchor.TOP_RIGHT, renderOrder = 80F)
 public class RenderDifficultyMenu implements IHudElement {
     public static final ResourceLocation ICON_NONE = CalamityCraft.id("textures/ui/difficulty/mode_indicator_none.png");
