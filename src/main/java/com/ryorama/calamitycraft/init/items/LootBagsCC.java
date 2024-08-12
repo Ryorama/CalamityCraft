@@ -1,4 +1,4 @@
-package com.ryorama.calamitycraft.init;
+package com.ryorama.calamitycraft.init.items;
 
 import com.ryorama.calamitycraft.common.content.items.loot_bags.StarterBagLoot;
 import com.ryorama.calamitycraft.common.events.ItemTabEvents;

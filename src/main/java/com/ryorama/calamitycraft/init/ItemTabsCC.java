@@ -1,6 +1,7 @@
 package com.ryorama.calamitycraft.init;
 
 import com.ryorama.calamitycraft.CalamityCraft;
+import com.ryorama.calamitycraft.init.items.MaterialsCC;
 import net.minecraft.util.ResourceLocation;
 import org.zeith.terraria.api.items.stack.IStackProvider;
 import org.zeith.terraria.api.items.tabs.ItemTab;

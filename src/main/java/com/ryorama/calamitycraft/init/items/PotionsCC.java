@@ -1,7 +1,9 @@
-package com.ryorama.calamitycraft.init;
+package com.ryorama.calamitycraft.init.items;
 
 import com.ryorama.calamitycraft.common.ItemRarityCC;
 import com.ryorama.calamitycraft.common.events.ItemTabEvents;
+import com.ryorama.calamitycraft.init.BlocksCC;
+import com.ryorama.calamitycraft.init.BuffsCC;
 import com.zeitheron.hammercore.annotations.RegistryName;
 import com.zeitheron.hammercore.annotations.SimplyRegister;
 import org.zeith.terraria.api.items.ItemRarity;

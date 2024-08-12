@@ -1,7 +1,7 @@
 package com.ryorama.calamitycraft.world.biomes;
 
-import com.ryorama.calamitycraft.common.content.biome_types.WorldBiomeTypeSulphurousSea;
-import com.ryorama.calamitycraft.init.BiomesCC;
+import com.ryorama.calamitycraft.common.content.biomes.WorldBiomeTypeSulphurousSea;
+import com.ryorama.calamitycraft.init.biomes.BiomesCC;
 import com.ryorama.calamitycraft.init.BlocksCC;
 import com.ryorama.calamitycraft.utils.InfoCC;
 import lombok.val;

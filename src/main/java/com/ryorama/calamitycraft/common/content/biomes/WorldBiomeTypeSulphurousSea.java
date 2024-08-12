@@ -1,4 +1,4 @@
-package com.ryorama.calamitycraft.common.content.biome_types;
+package com.ryorama.calamitycraft.common.content.biomes;
 
 import com.ryorama.calamitycraft.CalamityCraft;
 import com.ryorama.calamitycraft.init.BlocksCC;

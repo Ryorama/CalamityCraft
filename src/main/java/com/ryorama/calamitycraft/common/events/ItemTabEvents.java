@@ -1,6 +1,8 @@
 package com.ryorama.calamitycraft.common.events;
 
 import com.ryorama.calamitycraft.init.*;
+import com.ryorama.calamitycraft.init.blocks.OresCC;
+import com.ryorama.calamitycraft.init.items.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.zeith.terraria.api.events.item.PopulateTabEvent;

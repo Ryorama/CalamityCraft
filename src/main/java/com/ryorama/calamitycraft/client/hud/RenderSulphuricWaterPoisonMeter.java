@@ -14,7 +14,7 @@ import org.zeith.terraria.common.data.player.PlayerDataTC;
 public class RenderSulphuricWaterPoisonMeter
 		implements IHudElement
 {
-	public static final ResourceLocation WATER_BAR = CalamityCraft.id("textures/ui/sulph_water_bar.png");
+	public static final ResourceLocation WATER_BAR = CalamityCraft.id("textures/gui/sulph_water_bar.png");
 	
 	protected float prevSulphuricPoisoning;
 	protected float sulphuricPoisoning;

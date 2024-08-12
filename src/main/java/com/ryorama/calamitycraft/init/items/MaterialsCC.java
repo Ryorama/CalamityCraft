@@ -1,4 +1,4 @@
-package com.ryorama.calamitycraft.init;
+package com.ryorama.calamitycraft.init.items;
 
 import com.ryorama.calamitycraft.common.ItemRarityCC;
 import com.ryorama.calamitycraft.common.events.ItemTabEvents;

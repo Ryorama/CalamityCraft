@@ -92,4 +92,9 @@ buff.calamitycraft:sulphurskin.name=Sulphurskin
 buff.calamitycraft:sulphurskin.desc=The sulphuric waters have a lesser effect on you
 
 ## Tooltips ##
+
 tooltip.calamitycraft:potions/sulphurskin=Reduces the effects of the sulphuric waters
+
+## Invasions ##
+
+invasion.calamitycraft:acid_rain.name=Acid Rain

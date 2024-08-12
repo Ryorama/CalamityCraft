@@ -1,4 +1,4 @@
-package com.ryorama.calamitycraft.init;
+package com.ryorama.calamitycraft.init.blocks;
 
 import com.ryorama.calamitycraft.common.events.ItemTabEvents;
 import com.zeitheron.hammercore.annotations.RegistryName;

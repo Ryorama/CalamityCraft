@@ -1,7 +1,7 @@
-package com.ryorama.calamitycraft.init;
+package com.ryorama.calamitycraft.init.biomes;
 
 import com.ryorama.calamitycraft.CalamityCraft;
-import com.ryorama.calamitycraft.common.content.biome_types.WorldBiomeTypeSulphurousSea;
+import com.ryorama.calamitycraft.common.content.biomes.WorldBiomeTypeSulphurousSea;
 import org.zeith.terraria.api.world.WorldBiomeTypeRuleSet;
 
 public class BiomeTypesCC

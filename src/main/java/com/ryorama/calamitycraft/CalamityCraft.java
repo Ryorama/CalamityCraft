@@ -1,10 +1,9 @@
 package com.ryorama.calamitycraft;
 
-import com.ryorama.calamitycraft.init.BiomeTypesCC;
+import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
 import com.ryorama.calamitycraft.proxy.CommonProxy;
 import com.zeitheron.hammercore.HammerCore;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.zeith.hammerlib.util.mcf.Resources;
+import org.zeith.terraria.TerrariaCraft;
 import org.zeith.terraria.api.events.world.crafting.RegisterCraftingEvent;
 import org.zeith.terraria.api.mod.ITerrariaMod;
 
@@ -41,7 +41,7 @@ public class CalamityCraft
 	public CalamityCraft()
 	{
 		// Used to add custom recipes
-		MinecraftForge.EVENT_BUS.register(this);
+		TerrariaCraft.EVENT_BUS.register(this);
 	}
 	
 	public static ResourceLocation id(String id)

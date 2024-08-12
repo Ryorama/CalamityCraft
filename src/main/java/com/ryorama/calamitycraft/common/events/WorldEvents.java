@@ -1,6 +1,6 @@
 package com.ryorama.calamitycraft.common.events;
 
-import com.ryorama.calamitycraft.init.OresCC;
+import com.ryorama.calamitycraft.init.blocks.OresCC;
 import com.ryorama.calamitycraft.utils.UtilsCC;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

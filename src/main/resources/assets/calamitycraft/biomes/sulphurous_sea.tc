@@ -8,8 +8,7 @@
 		"sky": "FFE059",
 		"fog": "FFE97F",
 		"effects": [
-			"terraria:slime_rain",
-			"terraria:sandstorm"
+			"terraria:slime_rain"
 		]
 	}
 }

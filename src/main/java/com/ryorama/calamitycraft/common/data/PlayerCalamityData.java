@@ -1,6 +1,6 @@
 package com.ryorama.calamitycraft.common.data;
 
-import com.ryorama.calamitycraft.init.BiomesCC;
+import com.ryorama.calamitycraft.init.biomes.BiomesCC;
 import com.ryorama.calamitycraft.init.BuffsCC;
 import com.ryorama.calamitycraft.init.DataProvidersCC;
 import com.zeitheron.hammercore.api.io.NBTSerializable;
