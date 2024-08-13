@@ -3,6 +3,7 @@ package com.ryorama.calamitycraft.common.content.items.summon.event;
 import com.ryorama.calamitycraft.init.InvasionsCC;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.text.TextComponentTranslation;
 import org.zeith.terraria.api.core.TerrariaCraftAPI;
 import org.zeith.terraria.api.items.markers.IConsumable;
 import org.zeith.terraria.common.content.items.base.ItemBaseTC;
@@ -10,6 +11,7 @@ import org.zeith.terraria.common.data.player.PlayerDataTC;
 import org.zeith.terraria.common.data.world.world.WorldDataTC;
 import org.zeith.terraria.init.SoundsTC;
 import org.zeith.terraria.init.WorldEventsTC;
+import org.zeith.terraria.utils.forge.TextHelpers;
 
 
 //ToDo: Fix functionality
@@ -22,7 +24,7 @@ public class ItemTorrentialTear extends ItemBaseTC implements IConsumable {
         if (!player.isClientSide()) {
             WorldDataTC wd = player.world;
             if (!wd.isEventActive(WorldEventsTC.RAIN)) {
-                if (wd.startEvent(WorldEventsTC.RAIN)) {
+                if (WorldEventsTC.RAIN.getPrimer().start(wd)) {
                     //ToDo: Replace with Item_66/Nimbus Rod sound effect
                     TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_63_BLOWPIPE, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
                     player.startCustomSwingAndCooldown(10);
@@ -31,13 +33,14 @@ public class ItemTorrentialTear extends ItemBaseTC implements IConsumable {
                     }
                 }
             } else if (wd.isEventActive(WorldEventsTC.RAIN)) {
-                if (wd.stopEvent(WorldEventsTC.RAIN)) {
+                if (WorldEventsTC.RAIN.getPrimer().stop(wd)) {
                     if (wd.invasions().getActiveInvasion() == InvasionsCC.ACID_RAIN) {
-                        wd.invasions().stopInvasion(InvasionsCC.ACID_RAIN, true);
+                        wd.invasions().stopInvasion(InvasionsCC.ACID_RAIN, false);
+                        wd.broadcast(new TextComponentTranslation("invasion.calamitycraft:acid_rain.depart").setStyle(TextHelpers.ofColor(7586451)));
                     }
                     //ToDo: Replace with Item_66/Nimbus Rod sound effect
                     TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_63_BLOWPIPE, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
-                    player.startCustomSwingAndCooldown(10);
+                    player.startCustomSwingAndCooldown(20);
                     if (!player.isCreative()) {
                         swingStack.shrink(1);
                     }
