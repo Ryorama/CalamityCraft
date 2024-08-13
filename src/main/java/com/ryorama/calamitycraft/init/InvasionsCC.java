@@ -1,7 +1,9 @@
 package com.ryorama.calamitycraft.init;
 
+import com.ryorama.calamitycraft.utils.InfoCC;
 import com.zeitheron.hammercore.annotations.RegistryName;
 import com.zeitheron.hammercore.annotations.SimplyRegister;
+import org.zeith.terraria.api.client.music.MusicMood;
 import org.zeith.terraria.api.world.invasion.InvasionType;
 import org.zeith.terraria.common.data.world.world.WorldDataTC;
 import org.zeith.terraria.init.BossTypesTC;
@@ -13,6 +15,7 @@ public interface InvasionsCC
 	@RegistryName("acid_rain")
 	InvasionType ACID_RAIN = InvasionType.builder()
 			.totalPoints(InvasionsCC::acidRain1)
+			.musicOverride(MusicMood.of(2, InfoCC.id("music/acid_rain_tier1")))
 			.isActiveAround(InvasionsTC::surface)
 			.build();
 	
@@ -20,7 +23,6 @@ public interface InvasionsCC
 	{
 		if(!world.isBossDefeated(BossTypesTC.EYE_OF_CTHULHU))
 			return -1; // prevent from starting
-//		if(world.isBossDefeated(BossTypesCC.AQUATIC_SCOURGE) || world.isBossDefeated(BossTypesCC.POLTERGHAST)) return -1;
 		return 90;
 	}
 }

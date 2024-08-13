@@ -3,6 +3,7 @@
 itemGroup.calamitycraft:materials=Materials
 itemGroup.calamitycraft:loot_bags=Loot Bags
 itemGroup.calamitycraft:potions=Potions
+itemGroup.calamitycraft:summons=Summons
 itemGroup.calamitycraft:ores=Ores
 
 itemTab.calamitycraft:items=CalamityCraft (Items)
@@ -65,6 +66,9 @@ item.calamitycraft:potions/omega_healing.name=Omega Healing Potion
 item.calamitycraft:potions/supreme_healing.name=Supreme Healing Potion
 item.calamitycraft:potions/supreme_mana.name=Supreme Mana Potion
 
+item.calamitycraft:summons/invasions/caustic_tear.name=Caustic Tear
+item.calamitycraft:summons/events/torrential_tear.name=Torrential Tear
+
 item.calamitycraft:loot_bags/starter_bag.name=Starter Bag
 
 ## Blocks ##
@@ -94,6 +98,8 @@ buff.calamitycraft:sulphurskin.desc=The sulphuric waters have a lesser effect on
 ## Tooltips ##
 
 tooltip.calamitycraft:potions/sulphurskin=Reduces the effects of the sulphuric waters
+tooltip.calamitycraft:summons/events/torrential_tear=Summons the rain. Rain will start some time after this item is used. If used while it's raining, the rain will stop some time afterward
+tooltip.calamitycraft:summons/invasions/caustic_tear=Causes an acidic downpour in the Sulphurous Sea
 
 ## Invasions ##
 

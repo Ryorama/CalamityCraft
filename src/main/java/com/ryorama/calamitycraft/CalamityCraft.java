@@ -4,11 +4,13 @@ import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
 import com.ryorama.calamitycraft.proxy.CommonProxy;
 import com.zeitheron.hammercore.HammerCore;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.EventBus;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,7 +29,7 @@ public class CalamityCraft
 		implements ITerrariaMod
 {
 	public static final Logger LOG = LogManager.getLogger("CalamityCraft");
-	
+	public EventBus EVENT_BUS = MinecraftForge.EVENT_BUS;
 	public static final String MODID = "calamitycraft";
 	public static final String NAME = "CalamityCraft";
 	
@@ -56,6 +58,7 @@ public class CalamityCraft
 		ITerrariaMod.super.constructionEvent(event);
 		
 		// Pass construction to proxies.
+		EVENT_BUS.register(PROXY);
 		PROXY.construct();
 		
 		LOG.info("Constructed.");
