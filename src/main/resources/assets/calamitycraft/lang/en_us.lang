@@ -104,3 +104,5 @@ tooltip.calamitycraft:summons/invasions/caustic_tear=Causes an acidic downpour i
 ## Invasions ##
 
 invasion.calamitycraft:acid_rain.name=Acid Rain
+invasion.calamitycraft:acid_rain.arrive=A toxic downpour falls over the wasteland seas!
+invasion.calamitycraft:acid_rain.depart=The sulphuric skies begin to clear...

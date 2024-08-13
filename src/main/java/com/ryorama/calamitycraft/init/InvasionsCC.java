@@ -1,5 +1,6 @@
 package com.ryorama.calamitycraft.init;
 
+import com.ryorama.calamitycraft.init.biomes.BiomesCC;
 import com.ryorama.calamitycraft.utils.InfoCC;
 import com.zeitheron.hammercore.annotations.RegistryName;
 import com.zeitheron.hammercore.annotations.SimplyRegister;
@@ -15,8 +16,10 @@ public interface InvasionsCC
 	@RegistryName("acid_rain")
 	InvasionType ACID_RAIN = InvasionType.builder()
 			.totalPoints(InvasionsCC::acidRain1)
-			.musicOverride(MusicMood.of(2, InfoCC.id("music/acid_rain_tier1")))
-			.isActiveAround(InvasionsTC::surface)
+			.musicOverride(MusicMood.of(3, InfoCC.id("music/acid_rain_tier1")))
+			.isActiveAround((p) -> {
+				return p.pos().y > 0 && p.inBiome(BiomesCC.SULPHUROUS_SEA);
+			})
 			.build();
 	
 	static int acidRain1(WorldDataTC world)
