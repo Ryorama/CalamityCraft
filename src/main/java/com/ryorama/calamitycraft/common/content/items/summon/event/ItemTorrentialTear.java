@@ -20,32 +20,25 @@ public class ItemTorrentialTear extends ItemBaseTC implements IConsumable {
         this.hasTooltip = true;
     }
 
+    @Override
     public void onLeftClick(PlayerDataTC player, ItemStack swingStack) {
-        if (!player.isClientSide()) {
-            WorldDataTC wd = player.world;
-            if (!wd.isEventActive(WorldEventsTC.RAIN)) {
-                if (WorldEventsTC.RAIN.getPrimer().start(wd)) {
-                    //ToDo: Replace with Item_66/Nimbus Rod sound effect
-                    TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_63_BLOWPIPE, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
-                    player.startCustomSwingAndCooldown(10);
-                    if (!player.isCreative()) {
-                        swingStack.shrink(1);
-                    }
-                }
-            } else if (wd.isEventActive(WorldEventsTC.RAIN)) {
-                if (WorldEventsTC.RAIN.getPrimer().stop(wd)) {
-                    if (wd.invasions().getActiveInvasion() == InvasionsCC.ACID_RAIN) {
-                        wd.invasions().stopInvasion(InvasionsCC.ACID_RAIN, false);
-                        wd.broadcast(new TextComponentTranslation("invasion.calamitycraft:acid_rain.depart").setStyle(TextHelpers.ofColor(7586451)));
-                    }
-                    //ToDo: Replace with Item_66/Nimbus Rod sound effect
-                    TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_63_BLOWPIPE, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
-                    player.startCustomSwingAndCooldown(20);
-                    if (!player.isCreative()) {
-                        swingStack.shrink(1);
-                    }
-                }
-            }
-        }
-    }
+		if (player.isClientSide()) return;
+  
+		WorldDataTC wd = player.world;
+		if (!wd.isEventActive(WorldEventsTC.RAIN)) {
+			if (!WorldEventsTC.RAIN.getPrimer().start(wd)) return;
+			TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_66_NIMBUS_ROD, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
+			player.startCustomSwingAndCooldown(10);
+			if (!player.isCreative()) swingStack.shrink(1);
+		} else if (wd.isEventActive(WorldEventsTC.RAIN)) {
+			if (!WorldEventsTC.RAIN.getPrimer().stop(wd)) return;
+			if (wd.invasions().getActiveInvasion() == InvasionsCC.ACID_RAIN) {
+				wd.invasions().stopInvasion(InvasionsCC.ACID_RAIN, false);
+				wd.broadcast(new TextComponentTranslation("invasion.calamitycraft:acid_rain.depart").setStyle(TextHelpers.ofColor(7586451)));
+			}
+			TerrariaCraftAPI.SOUNDS.playSound(SoundsTC.ITEMS_66_NIMBUS_ROD, player.getWorld(), player.pos(), 128.0F, 1.0F, SoundCategory.AMBIENT);
+			player.startCustomSwingAndCooldown(20);
+			if (!player.isCreative()) swingStack.shrink(1);
+		}
+	}
 }

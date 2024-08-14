@@ -12,17 +12,13 @@ public class ItemCausticTear extends ItemBaseTC implements IConsumable {
         this.hasTooltip = true;
     }
 
+    @Override
     public void onLeftClick(PlayerDataTC player, ItemStack swingStack) {
-        if (!player.isClientSide()) {
-            WorldDataTC wd = player.world;
-            if (wd.invasions().getActiveInvasion() != InvasionsCC.ACID_RAIN) {
-                if (InvasionsCC.ACID_RAIN.enqueue(wd, 0)) {
-                    player.startCustomSwingAndCooldown(10);
-                    if (!player.isCreative()) {
-                        swingStack.shrink(1);
-                    }
-                }
-            }
-        }
-    }
+		if (player.isClientSide()) return;
+		WorldDataTC wd = player.world;
+		if (wd.invasions().getActiveInvasion() == InvasionsCC.ACID_RAIN) return;
+		if (!InvasionsCC.ACID_RAIN.enqueue(wd, 0)) return;
+		player.startCustomSwingAndCooldown(10);
+		if (!player.isCreative()) swingStack.shrink(1);
+	}
 }
