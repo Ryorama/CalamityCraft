@@ -4,10 +4,12 @@ import com.ryorama.calamitycraft.common.content.entity.ai.behaviours.WulfrumRove
 import com.ryorama.calamitycraft.init.SoundsCC;
 import net.minecraft.world.World;
 import org.zeith.hammeranims.api.animsys.AnimationSystem;
+import org.zeith.terraria.api.entity.IShowEntityHealth;
 import org.zeith.terraria.common.content.entity.api.EntityProps;
 import org.zeith.terraria.init.SoundsTC;
 
-public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> {
+//ToDo: Adjust Hitbox
+public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implements IShowEntityHealth {
     public WulfrumRoverEntity(World worldIn) {
         super(worldIn);
     }
@@ -20,6 +22,11 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> {
     @Override
     protected WulfrumRoverAI createAI() {
         return new WulfrumRoverAI(this);
+    }
+
+    @Override
+    public float getHealthBarInfoOffsetY() {
+        return 1.0F;
     }
 
     @Override
