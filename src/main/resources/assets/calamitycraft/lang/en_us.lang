@@ -87,6 +87,9 @@ tile.calamitycraft:pyre_mantle_molten.name=Pyre Mantle Molten
 tile.calamitycraft:sulphurous_shale.name=Sulphurous Shale
 tile.calamitycraft:voidstone.name=Voidstone
 
+## Entities ##
+entity.calamitycraft:hostile/wulfrum_rover.name=Wulfrum Rover
+
 ## Buffs ##
 
 buff.calamitycraft:irradiated.name=Irradiated

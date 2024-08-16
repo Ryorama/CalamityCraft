@@ -1,6 +1,6 @@
 package com.ryorama.calamitycraft.init;
 
-import com.ryorama.calamitycraft.CalamityCraft;
+import com.ryorama.calamitycraft.common.content.invasions.types.InvasionTypeAcidRain;
 import com.ryorama.calamitycraft.init.biomes.BiomesCC;
 import com.ryorama.calamitycraft.utils.InfoCC;
 import com.zeitheron.hammercore.annotations.RegistryName;
@@ -10,7 +10,6 @@ import org.zeith.terraria.api.client.music.MusicMood;
 import org.zeith.terraria.api.world.invasion.InvasionType;
 import org.zeith.terraria.common.data.world.world.WorldDataTC;
 import org.zeith.terraria.init.BossTypesTC;
-import org.zeith.terraria.init.InvasionsTC;
 import org.zeith.terraria.init.WorldEventsTC;
 import org.zeith.terraria.utils.forge.TextHelpers;
 
@@ -18,7 +17,7 @@ import org.zeith.terraria.utils.forge.TextHelpers;
 public interface InvasionsCC
 {
 	@RegistryName("acid_rain")
-	InvasionType ACID_RAIN = InvasionType.builder()
+	InvasionType ACID_RAIN = InvasionTypeAcidRain.builder()
 			.chatColor(7586451)
 			.totalPoints(InvasionsCC::acidRain1)
 			.onInvasionEnd(InvasionsCC::acidRainEnd)

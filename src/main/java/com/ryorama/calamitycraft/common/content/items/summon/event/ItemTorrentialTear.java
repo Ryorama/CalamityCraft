@@ -13,8 +13,6 @@ import org.zeith.terraria.init.SoundsTC;
 import org.zeith.terraria.init.WorldEventsTC;
 import org.zeith.terraria.utils.forge.TextHelpers;
 
-
-//ToDo: Fix functionality
 public class ItemTorrentialTear extends ItemBaseTC implements IConsumable {
     public ItemTorrentialTear() {
         this.hasTooltip = true;
