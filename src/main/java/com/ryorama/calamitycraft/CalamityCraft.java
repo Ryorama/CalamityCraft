@@ -3,6 +3,7 @@ package com.ryorama.calamitycraft;
 import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
 import com.ryorama.calamitycraft.proxy.CommonProxy;
 import com.zeitheron.hammercore.HammerCore;
+import lombok.Getter;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.zeith.hammerlib.util.mcf.Resources;
 import org.zeith.terraria.TerrariaCraft;
+import org.zeith.terraria.api.entity.reg.EntityCounter;
 import org.zeith.terraria.api.events.world.crafting.RegisterCraftingEvent;
 import org.zeith.terraria.api.mod.ITerrariaMod;
 
@@ -33,6 +35,9 @@ public class CalamityCraft
 	public static final String MODID = "calamitycraft";
 	public static final String NAME = "CalamityCraft";
 	
+	@Getter
+	private static EntityCounter entityCounter;
+	
 	@SidedProxy( // TODO: Update package names whenever you refactor!
 			clientSide = "com.ryorama.calamitycraft.proxy.ClientProxy",
 			serverSide = "com.ryorama.calamitycraft.proxy.CommonProxy",
@@ -42,6 +47,8 @@ public class CalamityCraft
 	
 	public CalamityCraft()
 	{
+		entityCounter = new EntityCounter(this);
+		
 		// Used to add custom recipes
 		TerrariaCraft.EVENT_BUS.register(this);
 	}
