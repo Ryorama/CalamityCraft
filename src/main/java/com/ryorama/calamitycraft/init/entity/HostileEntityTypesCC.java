@@ -1,5 +1,6 @@
 package com.ryorama.calamitycraft.init.entity;
 
+import com.ryorama.calamitycraft.common.content.entity.hostile.wulfrum.WulfrumGyratorEntity;
 import com.ryorama.calamitycraft.common.content.entity.hostile.wulfrum.WulfrumRoverEntity;
 import com.ryorama.calamitycraft.init.EntityTypesCC;
 import com.zeitheron.hammercore.annotations.RegistryName;
@@ -18,4 +19,10 @@ public interface HostileEntityTypesCC {
 			.sizePx(22F, 18F)
 			.withSpawn((f) -> new LayeredBiomeEntity<>(EnumLayer.SURFACE, 0.5F, MobSpawnConditions.SPAWN_ON_SURFACE, f).setBiome(BiomesTC.FOREST))
 			.withRenderer(EntityRendersTC.bedrock(HostileGeomCC.WULFRUM_ROVER, 0.15F));
+
+	@RegistryName("wulfrum_gyrator")
+	EntityType<WulfrumGyratorEntity> WULFRUM_GYRATOR = EntityTypesCC.$(WulfrumGyratorEntity.class, WulfrumGyratorEntity::new)
+			.sizePx(22F, 18F)
+			.withSpawn((f) -> new LayeredBiomeEntity<>(EnumLayer.SURFACE, 0.5F, MobSpawnConditions.SPAWN_ON_SURFACE, f).setBiome(BiomesTC.FOREST))
+			.withRenderer(EntityRendersTC.bedrock(HostileGeomCC.WULFRUM_GYRATOR, 0.15F));
 }

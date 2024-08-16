@@ -89,6 +89,7 @@ tile.calamitycraft:voidstone.name=Voidstone
 
 ## Entities ##
 entity.calamitycraft:hostile/wulfrum_rover.name=Wulfrum Rover
+entity.calamitycraft:hostile/wulfrum_gyrator.name=Wulfrum Gyrator
 
 ## Buffs ##
 

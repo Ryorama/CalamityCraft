@@ -5,6 +5,7 @@ import com.ryorama.calamitycraft.init.SoundsCC;
 import net.minecraft.world.World;
 import org.zeith.hammeranims.api.animsys.AnimationSystem;
 import org.zeith.terraria.common.content.entity.api.EntityProps;
+import org.zeith.terraria.init.SoundsTC;
 
 public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> {
     public WulfrumRoverEntity(World worldIn) {
@@ -29,7 +30,6 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> {
         entityProps.defense = isSupercharged ? 13 : 4;
         entityProps.knockBackResist = 85;
         entityProps.deathSound = SoundsCC.WULFRUM_DEATH.sound;
-        //ToDo: NPCHit4 for hit sound
-        //entityProps.hitSound = null;
+        entityProps.hitSound = SoundsTC.HIT_4.sound;
     }
 }

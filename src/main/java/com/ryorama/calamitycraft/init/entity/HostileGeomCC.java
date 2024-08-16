@@ -8,4 +8,7 @@ import org.zeith.hammeranims.api.geometry.IGeometryContainer;
 public interface HostileGeomCC {
     @RegistryName("wulfrum_rover")
     IGeometryContainer WULFRUM_ROVER = IGeometryContainer.create();
+
+    @RegistryName("wulfrum_gyrator")
+    IGeometryContainer WULFRUM_GYRATOR = IGeometryContainer.create();
 }
