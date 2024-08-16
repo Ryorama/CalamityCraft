@@ -1,5 +1,6 @@
 package com.ryorama.calamitycraft;
 
+import com.ryorama.calamitycraft.init.SoundsCC;
 import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
 import com.ryorama.calamitycraft.proxy.CommonProxy;
 import com.zeitheron.hammercore.HammerCore;
@@ -76,7 +77,7 @@ public class CalamityCraft
 	{
 		// This performs registration of things in time!
 		HammerCore.registerKernelsForMod(MODID);
-		
+		SoundsCC.register();
 		BiomeTypesCC.init();
 	}
 	

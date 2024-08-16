@@ -14,7 +14,8 @@ public class SoundsCC
         return new SoundObject(CalamityCraft.MODID, id);
     }
     
-    static {
+    public static void register() {
+        int sounds = 0;
         Field[] fs = SoundsCC.class.getDeclaredFields();
         for(Field f : fs)
             if(SoundObject.class.isAssignableFrom(f.getType()))
@@ -23,10 +24,12 @@ public class SoundsCC
                     f.setAccessible(true);
                     SoundObject so = (SoundObject) f.get(null);
                     SimpleRegistration.registerSound(so);
-					CalamityCraft.LOG.debug("Registered sound {}", so.name);
+                    ++sounds;
+                    CalamityCraft.LOG.debug("Registered sound {}", so.name);
                 } catch(Throwable err)
                 {
                     CalamityCraft.LOG.error("Failed to register mod sounds.", err);
                 }
+        CalamityCraft.LOG.info("Registered {} sounds into the game.", sounds);
     }
 }
