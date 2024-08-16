@@ -57,4 +57,9 @@ public class UtilsCC {
         }
         return true;
     }
+
+    public static int randBetweenInt(int min, int max) {
+        Random r = new Random();
+        return r.nextInt((max-min)+1) + min;
+    }
 }
