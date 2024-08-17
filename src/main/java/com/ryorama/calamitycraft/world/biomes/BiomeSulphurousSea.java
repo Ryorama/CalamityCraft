@@ -44,7 +44,8 @@ public class BiomeSulphurousSea
 	{
 		val w = WorldgenHelper.getCubeGenerator(e.getWorld());
 		val d = w.getData().computeIfAbsent(WorldBiomeTypeSulphurousSea.SEA_PLACEMENT_TOKEN);
-		if(d.contains(e.getActualPosition()) || d.contains(e.getPosition()))
+		if (d.contains(e.getActualPosition()) || d.contains(e.getPosition())) {
 			e.setOverridenBiome(BiomesCC.SULPHUROUS_SEA);
+		}
 	}
 }

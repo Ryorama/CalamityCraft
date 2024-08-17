@@ -32,7 +32,7 @@ public class CalamityCraft
 		implements ITerrariaMod
 {
 	public static final Logger LOG = LogManager.getLogger("CalamityCraft");
-	public EventBus EVENT_BUS = MinecraftForge.EVENT_BUS;
+	public static EventBus EVENT_BUS = MinecraftForge.EVENT_BUS;
 	public static final String MODID = "calamitycraft";
 	public static final String NAME = "CalamityCraft";
 	

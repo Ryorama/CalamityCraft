@@ -16,6 +16,7 @@ public class ItemTabEvents {
     public static final TabInfo TI_LOOTBAGS = TI_ITEMS.sub("loot_bags");
     public static final TabInfo TI_POTIONS = TI_ITEMS.sub("potions");
     public static final TabInfo TI_SUMMONS = TI_ITEMS.sub("summons");
+    public static final TabInfo TI_ACCESSORIES = TI_ITEMS.sub("accessories");
     public static final TabInfo TI_ORES = TI_BLOCKS.sub("ores");
     
     @SubscribeEvent
@@ -25,6 +26,7 @@ public class ItemTabEvents {
             e.setIcon(TI_LOOTBAGS, LootBagsCC.STARTER_BAG);
             e.setIcon(TI_POTIONS, PotionsCC.SULPHURSKIN_POTION);
             e.setIcon(TI_SUMMONS, InvasionSummonsCC.CAUSTIC_TEAR);
+            e.setIcon(TI_ACCESSORIES, AccessoriesCC.WULFRUM_BATTERY);
         }
         if (e.tab == ItemTabsCC.BLOCKS_ROOT) {
             e.setIcon(TI_ORES, OresCC.AERIALITE_ORE);

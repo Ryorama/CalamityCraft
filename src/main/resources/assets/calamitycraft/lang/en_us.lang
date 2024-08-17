@@ -4,6 +4,8 @@ itemGroup.calamitycraft:materials=Materials
 itemGroup.calamitycraft:loot_bags=Loot Bags
 itemGroup.calamitycraft:potions=Potions
 itemGroup.calamitycraft:summons=Summons
+itemGroup.calamitycraft:accessories=Accessories
+itemGroup.calamitycraft:entities=Entities
 itemGroup.calamitycraft:ores=Ores
 
 itemTab.calamitycraft:items=CalamityCraft (Items)
@@ -61,6 +63,8 @@ item.calamitycraft:materials/twisting_nether.name=Twisting Nether
 item.calamitycraft:materials/unholy_core.name=Unholy Core
 item.calamitycraft:materials/yharon_soul_fragment.name=Yharon Soul Fragment
 
+item.calamitycraft:accessories/wulfrum_battery.name=Wulfrum Battery
+
 item.calamitycraft:potions/sulphurskin.name=Sulphurskin Potion
 item.calamitycraft:potions/omega_healing.name=Omega Healing Potion
 item.calamitycraft:potions/supreme_healing.name=Supreme Healing Potion
@@ -102,8 +106,12 @@ buff.calamitycraft:sulphurskin.desc=The sulphuric waters have a lesser effect on
 ## Tooltips ##
 
 tooltip.calamitycraft:potions/sulphurskin=Reduces the effects of the sulphuric waters
-tooltip.calamitycraft:summons/events/torrential_tear=Summons the rain. Rain will start some time after this item is used. If used while it's raining, the rain will stop some time afterward
+
+tooltip.calamitycraft:summons/events/torrential_tear=Summons the rain</br>Rain will start some time after this item is used</br>If used while it's raining, the rain will stop some time afterward
+
 tooltip.calamitycraft:summons/invasions/caustic_tear=Causes an acidic downpour in the Sulphurous Sea
+
+tooltip.calamitycraft:accessories/wulfrum_battery=Empowers your summons with wulfrum energy, letting them emit light around them if visibility is enabled</br>7% increased summon damage</br>50% chance to get an extra scrap when killing wulfrum robots</br>Can also be scrapped at an extractinator
 
 ## Invasions ##
 

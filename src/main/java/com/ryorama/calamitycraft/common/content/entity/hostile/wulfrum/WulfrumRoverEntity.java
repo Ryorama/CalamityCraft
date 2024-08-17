@@ -2,6 +2,7 @@ package com.ryorama.calamitycraft.common.content.entity.hostile.wulfrum;
 
 import com.ryorama.calamitycraft.common.content.entity.ai.behaviours.WulfrumRoverAI;
 import com.ryorama.calamitycraft.init.SoundsCC;
+import com.ryorama.calamitycraft.init.items.AccessoriesCC;
 import com.ryorama.calamitycraft.init.items.MaterialsCC;
 import com.ryorama.calamitycraft.utils.UtilsCC;
 import net.minecraft.item.ItemStack;
@@ -63,6 +64,9 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
 
     public void createDrop(int looting, DamageSource source, NonNullList<ItemStack> drops) {
         drops.add(MaterialsCC.WULFRUM_METAL_SCRAP.stack(UtilsCC.randBetweenInt(1, 2)));
+        if (rand.nextInt(6) == 1) {
+            drops.add(AccessoriesCC.WULFRUM_BATTERY.stack());
+        }
 
         if (isSupercharged) {
             drops.add(MaterialsCC.ENERGY_CORE.stack());

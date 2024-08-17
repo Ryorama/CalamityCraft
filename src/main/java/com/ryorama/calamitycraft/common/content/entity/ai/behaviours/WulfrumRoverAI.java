@@ -29,12 +29,7 @@ public class WulfrumRoverAI extends AI<EntityGenericTerrariaMob<WulfrumRoverAI>>
 
                 base.velX = UtilsCC.lerp((float) base.velX, (float) (6 * direction), 0.0125f);
                 base.velZ = UtilsCC.lerp((float) base.velZ, (float) (6 * direction), 0.0125f);
-
-                if (base.target.posY > base.posY) {
-                    base.setVelocity(base.velX, 1, base.velZ);
-                } else {
-                    base.setVelocity(base.velX, -1, base.velZ);
-                }
+                base.setVelocity(base.velX, 0, base.velZ);
             }
         }
     }
