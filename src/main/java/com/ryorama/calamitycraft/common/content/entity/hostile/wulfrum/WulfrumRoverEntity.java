@@ -7,20 +7,32 @@ import com.ryorama.calamitycraft.utils.UtilsCC;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.zeith.hammeranims.api.animsys.AnimationSystem;
+import org.zeith.terraria.api.entity.IHasRotation;
 import org.zeith.terraria.api.entity.IShowEntityHealth;
 import org.zeith.terraria.common.content.entity.api.EntityProps;
 import org.zeith.terraria.init.SoundsTC;
+import org.zeith.terraria.utils.math.Vector2;
 
-public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implements IShowEntityHealth {
+public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implements IShowEntityHealth, IHasRotation {
+    protected float xRot;
+    protected float prevXRot;
+    protected float xRotMultiplier = 1.0F;
+
     public WulfrumRoverEntity(World worldIn) {
         super(worldIn);
     }
-
     @Override
-    public void setupSystem(AnimationSystem.Builder builder) {
-
+    @SideOnly(Side.CLIENT)
+    public void FX() {
+        super.FX();
+        Vec3d dir = this.getVel();
+        this.prevXRot = this.xRot;
+        this.xRot = (float)Math.atan2(dir.y, Vector2.length(dir.x, dir.z));
     }
 
     @Override
@@ -31,6 +43,10 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
     @Override
     public float getHealthBarInfoOffsetY() {
         return 1.0F;
+    }
+
+    public Vec3d getEntityRotation(float partialTicks) {
+        return new Vec3d((double)((this.prevXRot + (this.xRot - this.prevXRot) * partialTicks) * this.xRotMultiplier), 0.0, 0.0);
     }
 
     @Override

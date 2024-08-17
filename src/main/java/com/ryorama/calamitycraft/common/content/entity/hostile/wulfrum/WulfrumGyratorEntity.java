@@ -10,10 +10,11 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import org.zeith.hammeranims.api.animsys.AnimationSystem;
+import org.zeith.terraria.api.entity.IShowEntityHealth;
 import org.zeith.terraria.common.content.entity.api.EntityProps;
 import org.zeith.terraria.init.SoundsTC;
 
-public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> {
+public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> implements IShowEntityHealth {
     public WulfrumGyratorEntity(World worldIn) {
         super(worldIn);
     }
@@ -29,13 +30,13 @@ public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> {
     }
 
     @Override
-    public float getRenderEntityScale(float partialTicks) {
-        return 2;
+    public float getHealthBarInfoOffsetY() {
+        return 1.5F;
     }
 
     @Override
     public void initProps(EntityProps entityProps) {
-        entityProps.noGravity = true;
+        entityProps.noGravity = false;
         entityProps.lifeMax = 18;
         entityProps.damage = 15;
         entityProps.defense = 5;
@@ -43,6 +44,7 @@ public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> {
         entityProps.value = 115;
         entityProps.deathSound = SoundsCC.WULFRUM_DEATH.sound;
         entityProps.hitSound = SoundsTC.HIT_4.sound;
+        this.setScale(2);
     }
 
     public void createDrop(int looting, DamageSource source, NonNullList<ItemStack> drops) {

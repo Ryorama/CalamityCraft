@@ -22,6 +22,9 @@ public class WorldCalamityData extends BaseWorldDataTC<WorldCalamityData> implem
 	@NBTSerializable
 	public long lastAcidRainProgressTime;
 
+	@NBTSerializable
+	public boolean generatedAbyss;
+
     public WorldCalamityData(WorldDataProvider<WorldCalamityData> holder, WorldDataTC data) {
         super(holder, data);
     }

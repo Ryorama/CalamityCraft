@@ -7,6 +7,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class UtilsCC {
@@ -61,5 +63,71 @@ public class UtilsCC {
     public static int randBetweenInt(int min, int max) {
         Random r = new Random();
         return r.nextInt((max-min)+1) + min;
+    }
+
+    public static float lerp(float a, float b, float f)
+    {
+        return (float) (a * (1.0 - f) + (b * f));
+    }
+
+    //Source: https://bitbucket.org/Requios/effortless-building/src/master/src/main/java/nl/requios/effortlessbuilding/buildmode/buildmodes/Circle.java
+    public static List<BlockPos> getCircleBlocks(int x1, int y1, int z1, int x2, int y2, int z2) {
+        List<BlockPos> list = new ArrayList<>();
+
+        float centerX = x1;
+        float centerZ = z1;
+
+        x1 = (int) (centerX - (x2 - centerX));
+        z1 = (int) (centerZ - (z2 - centerZ));
+
+        float radiusX = Math.abs(x2 - centerX);
+        float radiusZ = Math.abs(z2 - centerZ);
+
+        addCircleBlocks(list, x1, y1, z1, x2, y2, z2, centerX, centerZ, radiusX, radiusZ);
+
+        return list;
+    }
+
+    public static void addCircleBlocks(List<BlockPos> list, int x1, int y1, int z1, int x2, int y2, int z2, float centerX, float centerZ, float radiusX, float radiusZ) {
+
+        for (int l = x1; x1 < x2 ? l <= x2 : l >= x2; l += x1 < x2 ? 1 : -1) {
+
+            for (int n = z1; z1 < z2 ? n <= z2 : n >= z2; n += z1 < z2 ? 1 : -1) {
+
+                float distance = distance(l, n, centerX, centerZ);
+                float radius = calculateEllipseRadius(centerX, centerZ, radiusX, radiusZ, l, n);
+                if (distance < radius + 0.4f)
+                    list.add(new BlockPos(l, y1, n));
+            }
+        }
+    }
+
+    private static float distance(float x1, float z1, float x2, float z2) {
+        return (float) Math.sqrt((x2 - x1) * (x2 - x1) + (z2 - z1) * (z2 - z1));
+    }
+
+    public static float calculateEllipseRadius(float centerX, float centerZ, float radiusX, float radiusZ, int x, int z) {
+        float theta = (float) Math.atan2(z - centerZ, x - centerX);
+        float part1 = (float) (radiusX * radiusX * Math.sin(theta) * Math.sin(theta));
+        float part2 = (float) (radiusZ * radiusZ * Math.cos(theta) * Math.cos(theta));
+        return (float) (radiusX * radiusZ / Math.sqrt(part1 + part2));
+    }
+
+    //Source: https://bitbucket.org/Requios/effortless-building/src/master/src/main/java/nl/requios/effortlessbuilding/buildmode/buildmodes/Cylinder.java
+    public static List<BlockPos> getCylinderBlocks(int x1, int y1, int z1, int x2, int y2, int z2) {
+        List<BlockPos> list = new ArrayList<>();
+
+        List<BlockPos> circleBlocks = getCircleBlocks(x1, y1, z1, x2, y2, z2);
+
+        int lowest = Math.min(y1, y2);
+        int highest = Math.max(y1, y2);
+
+        for (int y = lowest; y <= highest; y++) {
+            for (BlockPos blockPos : circleBlocks) {
+                list.add(new BlockPos(blockPos.getX(), y, blockPos.getZ()));
+            }
+        }
+
+        return list;
     }
 }
