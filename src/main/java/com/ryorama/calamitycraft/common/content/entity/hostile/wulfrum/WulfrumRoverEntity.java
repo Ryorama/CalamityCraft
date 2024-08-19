@@ -63,13 +63,6 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
     }
 
     public void createDrop(int looting, DamageSource source, NonNullList<ItemStack> drops) {
-        drops.add(MaterialsCC.WULFRUM_METAL_SCRAP.stack(UtilsCC.randBetweenInt(1, 2)));
-        if (rand.nextInt(6) == 1) {
-            drops.add(AccessoriesCC.WULFRUM_BATTERY.stack());
-        }
-
-        if (isSupercharged) {
-            drops.add(MaterialsCC.ENERGY_CORE.stack());
-        }
+        super.createDrop(looting, source, drops);
     }
 }

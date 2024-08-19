@@ -47,15 +47,4 @@ public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> im
         entityProps.hitSound = SoundsTC.HIT_4.sound;
         this.setScale(2);
     }
-
-    public void createDrop(int looting, DamageSource source, NonNullList<ItemStack> drops) {
-        drops.add(MaterialsCC.WULFRUM_METAL_SCRAP.stack(UtilsCC.randBetweenInt(1, 2)));
-        if (rand.nextInt(6) == 1) {
-            drops.add(AccessoriesCC.WULFRUM_BATTERY.stack());
-        }
-
-        if (isSupercharged) {
-            drops.add(MaterialsCC.ENERGY_CORE.stack());
-        }
-    }
 }

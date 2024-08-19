@@ -22,7 +22,7 @@ public interface HostileEntityTypesCC {
 
 	@RegistryName("wulfrum_gyrator")
 	EntityType<WulfrumGyratorEntity> WULFRUM_GYRATOR = EntityTypesCC.$(WulfrumGyratorEntity.class, WulfrumGyratorEntity::new)
-			.sizePx(2, 2)
+			.sizePx(4, 4)
 			.withSpawn((f) -> new LayeredBiomeEntity<>(EnumLayer.SURFACE, 0.5F, MobSpawnConditions.SPAWN_ON_SURFACE, f).setBiome(BiomesTC.FOREST))
 			.withRenderer(EntityRendersTC.bedrock(HostileGeomCC.WULFRUM_GYRATOR, 0.15F));
 }
