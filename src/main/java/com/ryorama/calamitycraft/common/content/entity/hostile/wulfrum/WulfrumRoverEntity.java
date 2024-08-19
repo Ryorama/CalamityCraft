@@ -27,6 +27,7 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
     public WulfrumRoverEntity(World worldIn) {
         super(worldIn);
     }
+    
     @Override
     @SideOnly(Side.CLIENT)
     public void FX() {
@@ -46,8 +47,9 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
         return 1.0F;
     }
 
+    @Override
     public Vec3d getEntityRotation(float partialTicks) {
-        return new Vec3d((double)((this.prevXRot + (this.xRot - this.prevXRot) * partialTicks) * this.xRotMultiplier), 0.0, 0.0);
+        return new Vec3d((this.prevXRot + (this.xRot - this.prevXRot) * partialTicks) * this.xRotMultiplier, 0.0, 0.0);
     }
 
     @Override
@@ -61,7 +63,8 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
         entityProps.deathSound = SoundsCC.WULFRUM_DEATH.sound;
         entityProps.hitSound = SoundsTC.HIT_4.sound;
     }
-
+    
+    @Override
     public void createDrop(int looting, DamageSource source, NonNullList<ItemStack> drops) {
         super.createDrop(looting, source, drops);
     }

@@ -1,6 +1,8 @@
 package com.ryorama.calamitycraft;
 
+import com.ryorama.calamitycraft.common.LootTablesCC;
 import com.ryorama.calamitycraft.init.SoundsCC;
+import com.ryorama.calamitycraft.init.TagsCC;
 import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
 import com.ryorama.calamitycraft.proxy.CommonProxy;
 import com.zeitheron.hammercore.HammerCore;
@@ -10,17 +12,19 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLConstructionEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.zeith.hammerlib.util.mcf.Resources;
 import org.zeith.terraria.TerrariaCraft;
+import org.zeith.terraria.api.crafting.ExtractinatorManager;
 import org.zeith.terraria.api.entity.reg.EntityCounter;
 import org.zeith.terraria.api.events.world.crafting.RegisterCraftingEvent;
 import org.zeith.terraria.api.mod.ITerrariaMod;
+import org.zeith.terraria.common.loot.TerraLootManager;
+import org.zeith.terraria.init.TagsTC;
 
 @Mod(
 		modid = CalamityCraft.MODID,
@@ -79,6 +83,13 @@ public class CalamityCraft
 		HammerCore.registerKernelsForMod(MODID);
 		SoundsCC.register();
 		BiomeTypesCC.init();
+		TagsCC.init();
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		ExtractinatorManager.bindMaterial(TagsCC.Items.WULFRUM_BATTERY, LootTablesCC.WULFRUM_BATTERY);
 	}
 	
 	@SubscribeEvent
