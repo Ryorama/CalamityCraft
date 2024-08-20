@@ -24,12 +24,12 @@ public class WulfrumRoverAI extends AI<EntityGenericTerrariaMob<WulfrumRoverAI>>
             if (this.base.target == null) {
                 this.base.targetClosest();
             } else {
-                double direction = Math.signum(base.target.posX - base.posX * 1);
+                double directionX = Math.signum(base.target.posX - base.posX * 1);
+                double directionZ = Math.signum(base.target.posZ - base.posZ * 1);
 
-
-                base.velX = UtilsCC.lerp((float) base.velX, (float) (6 * direction), 0.0125f);
-                base.velZ = UtilsCC.lerp((float) base.velZ, (float) (6 * direction), 0.0125f);
-                base.setVelocity(base.velX, 0, base.velZ);
+                base.velX = UtilsCC.lerp((float) base.velX, (float) (6 * directionX), 0.0125f);
+                base.velZ = UtilsCC.lerp((float) base.velZ, (float) (6 * directionZ), 0.0125f);
+                base.setVelocity(base.velX, -1, base.velZ);
             }
         }
     }

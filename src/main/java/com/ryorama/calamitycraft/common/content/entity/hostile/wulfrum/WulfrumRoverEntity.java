@@ -20,21 +20,9 @@ import org.zeith.terraria.init.SoundsTC;
 import org.zeith.terraria.utils.math.Vector2;
 
 public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implements IShowEntityHealth, IHasRotation {
-    protected float xRot;
-    protected float prevXRot;
-    protected float xRotMultiplier = 1.0F;
 
     public WulfrumRoverEntity(World worldIn) {
         super(worldIn);
-    }
-    
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void FX() {
-        super.FX();
-        Vec3d dir = this.getVel();
-        this.prevXRot = this.xRot;
-        this.xRot = (float)Math.atan2(dir.y, Vector2.length(dir.x, dir.z));
     }
 
     @Override
@@ -48,13 +36,7 @@ public class WulfrumRoverEntity extends WulfrumBaseEntity<WulfrumRoverAI> implem
     }
 
     @Override
-    public Vec3d getEntityRotation(float partialTicks) {
-        return new Vec3d((this.prevXRot + (this.xRot - this.prevXRot) * partialTicks) * this.xRotMultiplier, 0.0, 0.0);
-    }
-
-    @Override
     public void initProps(EntityProps entityProps) {
-        entityProps.noGravity = true;
         entityProps.lifeMax = 32;
         entityProps.damage = 10;
         entityProps.defense = isSupercharged ? 13 : 4;

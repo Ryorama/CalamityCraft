@@ -37,7 +37,6 @@ public class WulfrumGyratorEntity extends WulfrumBaseEntity<WulfrumGyratorAI> im
 
     @Override
     public void initProps(EntityProps entityProps) {
-        entityProps.noGravity = false;
         entityProps.lifeMax = 18;
         entityProps.damage = 15;
         entityProps.defense = 5;

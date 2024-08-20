@@ -1,6 +1,7 @@
 package com.ryorama.calamitycraft;
 
 import com.ryorama.calamitycraft.common.LootTablesCC;
+import com.ryorama.calamitycraft.common.events.EntityEvents;
 import com.ryorama.calamitycraft.init.SoundsCC;
 import com.ryorama.calamitycraft.init.TagsCC;
 import com.ryorama.calamitycraft.init.biomes.BiomeTypesCC;
