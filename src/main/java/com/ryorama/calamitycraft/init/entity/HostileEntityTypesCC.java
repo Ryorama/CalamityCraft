@@ -16,13 +16,13 @@ import org.zeith.terraria.init.biomes.BiomesTC;
 public interface HostileEntityTypesCC {
 	@RegistryName("wulfrum_rover")
 	EntityType<WulfrumRoverEntity> WULFRUM_ROVER = EntityTypesCC.$(WulfrumRoverEntity.class, WulfrumRoverEntity::new)
-			.sizePx(3, 3)
+			.sizePx(40, 40)
 			.withSpawn((f) -> new LayeredBiomeEntity<>(EnumLayer.SURFACE, 0.5F, MobSpawnConditions.SPAWN_ON_SURFACE, f).setBiome(BiomesTC.FOREST))
 			.withRenderer(EntityRendersTC.bedrock(HostileGeomCC.WULFRUM_ROVER, 0.15F));
 
 	@RegistryName("wulfrum_gyrator")
 	EntityType<WulfrumGyratorEntity> WULFRUM_GYRATOR = EntityTypesCC.$(WulfrumGyratorEntity.class, WulfrumGyratorEntity::new)
-			.sizePx(6, 6)
+			.sizePx(40, 40)
 			.withSpawn((f) -> new LayeredBiomeEntity<>(EnumLayer.SURFACE, 0.5F, MobSpawnConditions.SPAWN_ON_SURFACE, f).setBiome(BiomesTC.FOREST))
 			.withRenderer(EntityRendersTC.bedrock(HostileGeomCC.WULFRUM_GYRATOR, 0.15F));
 }
