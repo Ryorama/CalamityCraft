@@ -6,6 +6,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import org.zeith.terraria.utils.math.Vector2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -129,5 +130,9 @@ public class UtilsCC {
         }
 
         return list;
+    }
+
+    public static float angleTo(Vector2 v) {
+        return (float) Math.atan2(v.y - (v.y / 2), v.x - (v.x / 2));
     }
 }

@@ -7,17 +7,13 @@ import org.zeith.terraria.common.data.world.spawn.MobDespawner;
 import org.zeith.terraria.init.BuffsTC;
 
 public class WulfrumRoverAI extends AI<EntityGenericTerrariaMob<WulfrumRoverAI>> {
+    public float timeSpentStuck;
     public WulfrumRoverAI(EntityGenericTerrariaMob<WulfrumRoverAI> base) {
         super(base);
     }
 
     @Override
     public void onLivingUpdatePre() {
-
-    }
-
-    @Override
-    public void onLivingUpdatePost() {
         if (this.base.ticksExisted > 400 && !MobDespawner.isInViewAngleOfAnyPlayer(this.base, 24.0)) {
             this.base.setDead();
         } else {
@@ -28,9 +24,22 @@ public class WulfrumRoverAI extends AI<EntityGenericTerrariaMob<WulfrumRoverAI>>
                 double directionZ = Math.signum(base.target.posZ - base.posZ * 1);
 
                 base.velX = UtilsCC.lerp((float) base.velX, (float) (6 * directionX), 0.0125f);
+                base.velY = -4;
                 base.velZ = UtilsCC.lerp((float) base.velZ, (float) (6 * directionZ), 0.0125f);
-                base.setVelocity(base.velX, -1, base.velZ);
+
+                if (base.prevPosX == base.posX && base.prevPosZ == base.posZ) {
+                    timeSpentStuck++;
+                    if (timeSpentStuck > 90) {
+                        base.velY = 20;
+                        timeSpentStuck = 0;
+                    }
+                }
             }
         }
+    }
+
+    @Override
+    public void onLivingUpdatePost() {
+
     }
 }
