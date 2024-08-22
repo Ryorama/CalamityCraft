@@ -8,6 +8,7 @@ import org.zeith.terraria.common.content.blocks.grass.BlockTerrariaGrass;
 import org.zeith.terraria.common.content.fluids.FluidAPI;
 import org.zeith.terraria.init.BlocksTC;
 import org.zeith.terraria.init.FluidsTC;
+import org.zeith.terraria.utils.math.EnumStructureRotation;
 import org.zeith.terraria.utils.math.Vector2;
 import org.zeith.terraria.world.api.WorldgenHelper;
 import org.zeith.terraria.world.struct.base.Structure;

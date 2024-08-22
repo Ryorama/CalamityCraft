@@ -2,7 +2,7 @@
 mod_id=calamitycraft
 mod_id_fancy=CalamityCraft
 mod_name=CalamityCraft
-mod_version=12.5.1
+mod_version=12.7.1
 author=Ryorama
 
 #Runtime info
