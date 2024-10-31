@@ -39,7 +39,7 @@ public class ItemWulfrumBattery extends ItemBaseArtifactTC implements IWulfrumBa
 		// TLDR: 'tags' inside events are a one-time-add thing.
 		// To implement stacking, simply use a different key, or avoid using tags altogether!
 		//                                  - Zeith
-		if(e.addTag("calamitycraft:wulfrum_battery")) e.mult(0.07F);
+		if(e.addTag("calamitycraft:wulfrum_battery")) e.addMult(0.07F);
 	}
 
 	@Override
