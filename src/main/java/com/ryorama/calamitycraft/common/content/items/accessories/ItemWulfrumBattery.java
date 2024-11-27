@@ -4,6 +4,7 @@ import com.ryorama.calamitycraft.CalamityCraft;
 import com.ryorama.calamitycraft.common.content.items.accessories.typed.IWulfrumBattery;
 import com.zeitheron.hammercore.utils.AABBUtils;
 import com.zeitheron.hammercore.utils.forge.RegisterHook;
+import lombok.val;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -30,6 +31,11 @@ public class ItemWulfrumBattery extends ItemBaseArtifactTC implements IWulfrumBa
 	public boolean isEquipped(PlayerDataTC pd) {
 		return !pd.artifactInventory.find(s -> s.getItem() instanceof IWulfrumBattery).isEmpty();
 	}
+	
+	public boolean isEquippedVisually(PlayerDataTC pd) {
+		val v = pd.vanity();
+		return !pd.artifactInventory.find((s, slot) -> s.getItem() instanceof IWulfrumBattery && v.isArtifactVisible(slot)).isEmpty();
+	}
 
 	@SubscribeEvent
 	public void increaseDamage(GetDamageAffectEvent e)
@@ -46,7 +52,7 @@ public class ItemWulfrumBattery extends ItemBaseArtifactTC implements IWulfrumBa
 	public void onArtifactWearTick(EntityPlayer player, ItemStack stack, int slot, PlayerDataTC data) {
 		PlayerDataTC.optionally(player)
 				.filter(PlayerDataTC::isClientSide)
-				.filter(this::isEquipped)
+				.filter(this::isEquippedVisually)
 				.map(PlayerDataTC::minions)
 				.map(PlayerMinionData::minionEntities)
 				.orElse(Stream.empty())
