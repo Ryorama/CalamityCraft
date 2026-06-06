@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/blood_sample"
+    "layer0": "calamitycraft:item/materials/blood_sample"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/reaper_tooth"
+    "layer0": "calamitycraft:item/materials/reaper_tooth"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "calamitycraft:blocks/ores/scoria_ore"
+    "all": "calamitycraft:block/ores/scoria_ore"
   }
 }

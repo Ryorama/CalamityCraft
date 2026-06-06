@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/solar_veil"
+    "layer0": "calamitycraft:item/materials/solar_veil"
   }
 }

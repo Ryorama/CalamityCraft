@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/exo_prism"
+    "layer0": "calamitycraft:item/materials/exo_prism"
   }
 }

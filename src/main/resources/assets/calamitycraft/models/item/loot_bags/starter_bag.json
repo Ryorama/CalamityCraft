@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/loot_bags/starter_bag"
+    "layer0": "calamitycraft:item/loot_bags/starter_bag"
   }
 }

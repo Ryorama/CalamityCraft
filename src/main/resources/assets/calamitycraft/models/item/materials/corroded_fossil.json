@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/corroded_fossil"
+    "layer0": "calamitycraft:item/materials/corroded_fossil"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/stormlion_mandible"
+    "layer0": "calamitycraft:item/materials/stormlion_mandible"
   }
 }

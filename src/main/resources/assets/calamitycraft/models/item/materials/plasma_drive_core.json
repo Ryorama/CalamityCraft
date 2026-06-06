@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/plasma_drive_core"
+    "layer0": "calamitycraft:item/materials/plasma_drive_core"
   }
 }

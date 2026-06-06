@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/grand_scale"
+    "layer0": "calamitycraft:item/materials/grand_scale"
   }
 }

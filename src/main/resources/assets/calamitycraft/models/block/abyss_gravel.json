@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "calamitycraft:blocks/abyss_gravel"
+    "all": "calamitycraft:block/abyss_gravel"
   }
 }

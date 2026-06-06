@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/rotten_matter"
+    "layer0": "calamitycraft:item/materials/rotten_matter"
   }
 }

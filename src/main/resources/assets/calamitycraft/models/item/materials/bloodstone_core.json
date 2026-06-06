@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/bloodstone_core"
+    "layer0": "calamitycraft:item/materials/bloodstone_core"
   }
 }

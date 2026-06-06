@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/life_alloy"
+    "layer0": "calamitycraft:item/materials/life_alloy"
   }
 }

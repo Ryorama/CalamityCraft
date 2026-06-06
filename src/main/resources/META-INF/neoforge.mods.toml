@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[3,)"
+license = "Insert License Here"
+[[mods]]
+modId="calamitycraft"
+displayName="CalamityCraft"
+version="1.0"
+authors="Ryorama"
+description='''Porting content from the calamity mod to confluence.'''
+credits ='''
+Re-Logic for making Terraria, and the Calamity mod team
+'''
+[[mixins]]
+config="calamitycraft.mixins.json"
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+[[dependencies.calamitycraft]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.0.10,)"
+    ordering="NONE"
+    side="BOTH"

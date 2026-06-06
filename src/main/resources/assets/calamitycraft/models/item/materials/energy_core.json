@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/energy_core"
+    "layer0": "calamitycraft:item/materials/energy_core"
   }
 }

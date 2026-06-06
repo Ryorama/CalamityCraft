@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/depth_cells"
+    "layer0": "calamitycraft:item/materials/depth_cells"
   }
 }

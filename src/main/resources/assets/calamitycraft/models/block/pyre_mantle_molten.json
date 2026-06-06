@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "calamitycraft:blocks/pyre_mantle_molten"
+    "all": "calamitycraft:block/pyre_mantle_molten"
   }
 }

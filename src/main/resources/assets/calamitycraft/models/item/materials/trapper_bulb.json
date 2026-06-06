@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/trapper_bulb"
+    "layer0": "calamitycraft:item/materials/trapper_bulb"
   }
 }

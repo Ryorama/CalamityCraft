@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/materials/essence_of_havoc"
+    "layer0": "calamitycraft:item/materials/essence_of_havoc"
   }
 }

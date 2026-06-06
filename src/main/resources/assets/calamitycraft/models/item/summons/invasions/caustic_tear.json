@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/summons/invasions/caustic_tear"
+    "layer0": "calamitycraft:item/summons/invasions/caustic_tear"
   }
 }

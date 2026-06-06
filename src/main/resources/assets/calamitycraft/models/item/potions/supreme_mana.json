@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "calamitycraft:items/potions/supreme_mana"
+    "layer0": "calamitycraft:item/potions/supreme_mana"
   }
 }

@@ -1,32 +1,5 @@
-# eclipse
-eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
-
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
-
-# gradle
-build
 .gradle
-*.html
-
-# Dev assets
-/run/*
-
-# other
-*.rar
-*.jks
-~ GIT/
-PublicBuilds/
-zCFS/Bedrock2JavaAnim/
-~SubProjects/
-/libraries
+.idea
+build
+run
+src/generated/resources/.cache
