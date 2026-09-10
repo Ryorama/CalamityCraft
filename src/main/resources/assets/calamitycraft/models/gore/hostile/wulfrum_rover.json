@@ -1,0 +1,15 @@
+{
+  "type": "terraria:inherit_geo",
+  "bones": {
+    "body": {},
+    "attennae": {
+      "render_children": true
+    },
+    "wheelleft": {
+      "render_children": true
+    },
+    "wheelright": {
+      "render_children": true
+    }
+  }
+}
