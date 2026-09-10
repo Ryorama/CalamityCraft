@@ -194,7 +194,8 @@ dependencies {
 def startTasks = gradle.startParameter.taskNames
 def intellijIDE = (System.getProperty("idea.sync.active") == "true" || System.getProperty("idea.active") == "true") && !startTasks.contains("build") && !startTasks.contains("buildAndUploadMod") && !startTasks.contains("publishAllPublicationsToMavenRepository") && !startTasks.contains("publish") && !startTasks.contains("jar")
 
-println "Running IntelliJ IDE: " + intellijIDE
+println "Running IntelliJ IDE: $intellijIDE"
+println "Loading project for TerarriaCraft $tc_version"
 
 task cleanReplaces(type: Delete) {
     delete "build/sources/replaced"
