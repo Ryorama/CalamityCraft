@@ -2,12 +2,15 @@
   "creativetab.calamitycraft.calamity_materials": "Calamity Materials",
   "creativetab.calamitycraft.calamity_potions": "Calamity Potions",
   "creativetab.calamitycraft.calamity_accessories": "Calamity Accessories",
+  "creativetab.calamitycraft.calamity_weapons": "Calamity Weapons",
+  "creativetab.calamitycraft.calamity_tools": "Calamity Tools",
+
+  "block.calamitycraft.materials.energy_core": "Energy Core",
+
   "item.calamitycraft.materials.wulfrum_metal_scrap": "Wulfrum Metal Scrap",
-  "item.calamitycraft.materials.energy_core": "Energy Core",
+  "item.calamitycraft.materials.wulfrum_ingot": "Wulfrum Ingot",
   "item.calamitycraft.materials.ancient_bone_dust": "Ancient Bone Dust",
   "item.calamitycraft.materials.blood_orb": "Blood Orb",
-  "item.calamitycraft.materials.blood_sample": "Blood Sample",
-  "item.calamitycraft.materials.demonic_bone_ash": "Demonic Bone Ash",
   "item.calamitycraft.materials.dubious_plating": "Dubious Plating",
   "item.calamitycraft.materials.murky_paste": "Murky Paste",
   "item.calamitycraft.materials.mysterious_circuitry": "Mysterious Circuitry",
@@ -36,7 +39,6 @@
   "item.calamitycraft.materials.living_shard": "Living Shard",
   "item.calamitycraft.materials.lumenyl": "Lumenyl",
   "item.calamitycraft.materials.meld_blob": "Meld Blob",
-  "item.calamitycraft.materials.meld_construct": "Meld Construct",
   "item.calamitycraft.materials.miracle_matter": "Miracle Matter",
   "item.calamitycraft.materials.mollusk_husk": "Mollusk Husk",
   "item.calamitycraft.materials.plague_cell_canister": "Plague Cell Canister",
@@ -58,8 +60,17 @@
   "item.calamitycraft.potions.supreme_healing": "Supreme Healing Potion",
   "item.calamitycraft.potions.supreme_mana": "Supreme Mana Potion",
 
+  "item.calamitycraft.tools.pickaxes.wulfrum": "Wulfrum Pickaxe",
+  "item.calamitycraft.tools.axes.wulfrum": "Wulfrum Axe",
+  "item.calamitycraft.tools.shovels.wulfrum": "Wulfrum Shovel",
+  "item.calamitycraft.tools.hoes.wulfrum": "Wulfrum Hoe",
+
+  "item.calamitycraft.weapons.melee.swords.wulfrum": "Wulfrum Sword",
+
   "item.calamitycraft.summons.events.caustic_tear": "Caustic Tear",
   "item.calamitycraft.summons.invasions.torrential_tear": "Torrential Tear",
+
+  "tooltip.item.materials.energy_core": "Can be placed",
 
   "tooltip.item.calamitycraft.accessories.wulfrum_battery.0": "Your summons emit light",
   "tooltip.item.terra_curio.wulfrum_battery.1": "7% increased summon damage",

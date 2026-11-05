@@ -1,0 +1,84 @@
+{
+  "carvers": {},
+  "downfall": 0,
+  "effects": {
+    "fog_color": -10541025,
+    "foliage_color": 10387789,
+    "grass_color": 9470285,
+    "sky_color": -4592650,
+    "water_color": -10541025,
+    "water_fog_color": 4159204
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "confluence:ash_hellstone"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "confluence:fireblossom"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [
+      {
+        "type": "terra_entity:demon",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 15
+      },
+      {
+        "type": "terra_entity:voodoo_demon",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 4
+      },
+      {
+        "type": "terra_entity:fire_imp",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 20
+      },
+      {
+        "type": "terra_entity:bone_serpent",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "terra_entity:hell_bat",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 40
+      },
+      {
+        "type": "terra_entity:lava_slime",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 40
+      },
+      {
+        "type": "terra_entity:shadow_mimic",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 2
+}

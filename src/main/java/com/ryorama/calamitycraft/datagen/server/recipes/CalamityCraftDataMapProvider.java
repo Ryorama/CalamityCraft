@@ -1,6 +1,7 @@
 package com.ryorama.calamitycraft.datagen.server.recipes;
 
 import com.ryorama.calamitycraft.init.CCAccessories;
+import com.ryorama.calamitycraft.init.CCBlocks;
 import com.ryorama.calamitycraft.init.CCMaterials;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -27,7 +28,7 @@ public final class CalamityCraftDataMapProvider extends DataMapProvider {
     public static void extractinator(CalamityCraftDataMapProvider.Appender<DataMapProvider.Builder<ExtractinatorData, Item>> appender) {
         appender.create().add(CCAccessories.WULFRUM_BATTERY, ExtractinatorData.builder()
                 .withPool(ExtractinatorData.Pool.builder()
-                        .add(ExtractinatorData.Entry.of(CCMaterials.ENERGY_CORE.get(), 1, 20))
+                        .add(ExtractinatorData.Entry.of(CCBlocks.ENERGY_CORE.get(), 1, 20))
                         .add(ExtractinatorData.Entry.of(CCMaterials.WULFRUM_METAL_SCRAP.get(), 3, 5, 80))
                 ).build(), false);
     }

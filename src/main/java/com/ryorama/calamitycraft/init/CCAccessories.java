@@ -5,7 +5,6 @@ import com.ryorama.calamitycraft.item.WulfrumBattery;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import org.confluence.lib.common.component.ModRarity;
 import org.confluence.terra_curio.common.item.curio.BaseCurioItem;
 
 import java.util.function.Supplier;

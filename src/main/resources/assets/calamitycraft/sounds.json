@@ -1,5 +1,30 @@
 {
-  "death/wulfrum_death": {
-    "sounds": [ "calamitycraft:death/wulfrum_death" ]
+  "hit/wulfrum_hit1":{
+    "category":"sounds",
+    "subtitle":"calamitycraft.hit.wulfrum_hit1",
+    "sounds":[
+      "calamitycraft:hit/wulfrum_hit1"
+    ]
+  },
+  "hit/wulfrum_hit2":{
+    "category":"sounds",
+    "subtitle":"calamitycraft.hit.wulfrum_hit2",
+    "sounds":[
+      "calamitycraft:hit/wulfrum_hit2"
+    ]
+  },
+  "hit/wulfrum_hit3":{
+    "category":"sounds",
+    "subtitle":"calamitycraft.hit.wulfrum_hit3",
+    "sounds":[
+      "calamitycraft:hit/wulfrum_hit3"
+    ]
+  },
+  "death/wulfrum_death":{
+    "category":"sounds",
+    "subtitle":"calamitycraft.death.wulfrum_death",
+    "sounds":[
+      "calamitycraft:death/wulfrum_death"
+    ]
   }
 }

@@ -114,6 +114,7 @@ dependencies {
     implementation("nowebsite.makertechno:TheTrackers:${minecraft_version}-${trackers_version}")
     implementation("org.mesdag:ParticleStorm:${particle_storm_version}")
     implementation("org.mesdag.thr_dim_particle:ThreeDimensionParticle-core:${tdpc_version}")
+    implementation("maven.modrinth:confluence-music:${confluence_music_version}")
 
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.1"))
     implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.7-beta.1")) {

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "calamitycraft:block/materials/energy_core"
+    }
+  }
+}

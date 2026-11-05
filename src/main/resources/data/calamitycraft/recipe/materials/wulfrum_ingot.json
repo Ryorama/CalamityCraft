@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "calamitycraft:materials/energy_core"
+    },
+    {
+      "item": "calamitycraft:materials/wulfrum_metal_scrap"
+    },
+    {
+      "item": "calamitycraft:materials/wulfrum_metal_scrap"
+    },
+    {
+      "item": "calamitycraft:materials/wulfrum_metal_scrap"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "calamitycraft:materials/wulfrum_ingot"
+  }
+}
